@@ -16,6 +16,9 @@ export default function Contact() {
         <Link href='/'>
             <a>Home</a>
         </Link>
+        <section>
+          <p>Example text about us</p>
+        </section>
 
 
       </main>
