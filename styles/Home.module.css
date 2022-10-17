@@ -1,13 +1,21 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 .social {
-  color:#fafafa;
-  background-color: whitesmoke;
-  border-radius: 50%;
   padding: 5px;
-  margin: 10px;
+  border-radius: 50%;
+}
+
+.social:hover {
+  background-color: #9F9C93;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 3px solid black */
 }
 
 .main {
@@ -18,10 +26,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border: 3px solid black */
 }
 
 .hero {
-  border: 3px solid black ;
+  /* border: 3px solid black ; */
 
 }
 
