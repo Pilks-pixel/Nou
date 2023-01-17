@@ -3,30 +3,28 @@ import styles from './nav.module.css'
 
 export default function Nav() {
 
-    return(
-        <>
-    
-        <nav className={styles.nav}>
-          <ul className={styles.container}>
-            <li>
-              <Link href='/services'>
-                <a>services</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/work'>
-                <a>work</a>
+    return <>
 
-              </Link>
-            </li>
-            <li>
-              <Link href='/contact'>
-                <a>contact</a>
+    <nav className={styles.nav}>
+      <ul className={styles.container}>
+        <li>
+          <Link href='/services'>
+            services
+          </Link>
+        </li>
+        <li>
+          <Link href='/work'>
+            work
 
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        </>
-    )
+          </Link>
+        </li>
+        <li>
+          <Link href='/contact'>
+            contact
+
+          </Link>
+        </li>
+      </ul>
+    </nav>
+    </>;
 }
