@@ -1,8 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Nav from '../components/Nav'
+import {Bai_Jamjuree} from '@next/font/google'
+
+  const baiJamjuree = Bai_Jamjuree({
+    weight:['500', '700'],
+    subsets: ['latin'],
+  })
 
 
 
@@ -25,7 +31,9 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1 className={styles.mainTitle}>brand & web design studio</h1>
+          <div className={`${baiJamjuree.className} ${styles.mainTitle}`}>
+            <h1>brand & web design studio</h1>
+          </div>
           <span className={styles.subHeading}>Inspired by Minimalism and fascinated by technology, we craft brands and websites that elevate and up level your business</span>
 
         </div>            
