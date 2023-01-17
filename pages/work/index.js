@@ -5,7 +5,7 @@ import styles from '../../styles/Work.module.css'
 
 export default function Work() {
 
-    return(
+    return (
         <div className={styles.container}>
             <Head>
                 <title>Work</title>
@@ -13,7 +13,7 @@ export default function Work() {
             <main>
                 <h1>This is the work page</h1>
                 <Link href='/'>
-                    <a>Home</a>
+                    Home
                 </Link>
                 <section>
                     <p>Example text about us</p>
@@ -26,5 +26,5 @@ export default function Work() {
             </footer>
 
         </div>
-    )
+    );
 }
