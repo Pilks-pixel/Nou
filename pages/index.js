@@ -1,62 +1,69 @@
-import Head from 'next/head'
+import Head from "next/head";
 import Image from "next/legacy/image";
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import Nav from '../components/Nav'
-import {Bai_Jamjuree} from '@next/font/google'
-
-  const baiJamjuree = Bai_Jamjuree({
-    weight:['500', '700'],
-    subsets: ['latin'],
-  })
-
-
-
+import styles from "../styles/Home.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
+import Nav from "../components/Nav/Nav";
+import Featured from "../components/featured/featured";
+  
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        
-        <title>Nou Design Studio</title>
-        <meta name="Nou design studio" content="Nou homepage" />
-        
-      </Head>
-      <header className={styles.header}>
-        <div className={styles.logoImage}>
-          <Image src='/asset1.svg' alt='nou logo' width={150} height={50} layout="responsive"/>
-        </div>
 
-        {/* <Nav /> */}
-      </header>
-      <main className={styles.main}>
-        <div className={styles.hero}>
-          <div className={`${baiJamjuree.className} ${styles.mainTitle}`}>
-            <h1>brand & web design studio</h1>
-          </div>
-          <span className={styles.subHeading}>Inspired by Minimalism and fascinated by technology, we craft brands and websites that elevate and up level your business</span>
+	return (
+		<div className={utilStyles.container}>
+			<Head>
+				<title>Nou Design Studio</title>
+				<meta name='Nou design studio' content='Nou homepage' />
+			</Head>
 
-        </div>            
+			<header className={styles.header}>
+				<Image
+					src='/asset1.svg'
+					alt='nou logo'
+					width={75}
+					height={18}
+					layout='intrinsic'
+				/>
+				{/* <Nav /> */}
+			</header>
 
-        <section>
-          <div className={styles.banner}>
-            <h3>your business needs memorable</h3>
-          </div>
+			<main className={styles.main}>
+				<section className={styles.hero}>
+					<div className={styles.mainTitle}>
+						<h1>brand & web design studio</h1>
+					</div>
+					<span className={styles.subHeading}>
+						Inspired by Minimalism and fascinated by technology, we craft brands
+						and websites that elevate and up level your business
+					</span>
+					<div className={utilStyles.btn}>
+						<span>Work with us</span>
+					</div>
+				</section>
+			</main>
 
-        </section>
-         
-      </main>
+			<section>
+				<div className={styles.banner}>
+					<h3>your business needs memorable branding</h3>
+				</div>
+			</section>
+			<Featured />
 
-      <footer className={styles.footer}>
-      <a href='https://www.instagram.com/noudesign.studio/' target="_blank" className={styles.social}>
-            <Image 
-            src='/icons8-instagram-50.png' 
-            alt='instagram link' 
-            width={40} height={40} 
-            className={styles.social}
-            />
-          </a>
-      </footer>
-    </div>
-  )
+			<footer className={styles.footer}>
+				<a
+					href='https://www.instagram.com/noudesign.studio/'
+					target='_blank'
+					className={styles.social}
+				>
+					<Image
+						src='/icons8-instagram-50.png'
+						alt='instagram link'
+						width={40}
+						height={40}
+						className={styles.social}
+					/>
+				</a>
+			</footer>
+		</div>
+	);
 }

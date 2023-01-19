@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Link from 'next/link'
+import Featured from "../../components/featured/featured";
 import styles from '../../styles/Work.module.css'
 
 
@@ -17,6 +18,7 @@ export default function Work() {
                 </Link>
                 <section>
                     <p>Example text about us</p>
+                    <Featured />
                 </section>
 
 

@@ -1,10 +1,6 @@
 /* ==========
 Layout
 ========== */
-.container {
-  padding: 0;
-  margin: 0;
-}
 
 /* Flex containers */
 .header {
@@ -12,17 +8,18 @@ Layout
   justify-content: flex-end; */
   /* margin: 0 auto; */
   padding: 1em;
+  background: #F5F5EF;
   border: 2px solid black;
 }
 
 .main {
-  min-height: 90vh;
-  padding: 1rem 0;
+  /* min-height: 70vh; */
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #F5F5EF;
 }
 
 .footer {
@@ -32,15 +29,16 @@ Layout
   border-top: 2px solid black;
   justify-content: center;
   align-items: center;
-  background: #F5F5EE
+  background: #F5F5EE;
 }
 
+/* Containers */
 .hero {
   background: #F5F5EF;
   width: 90%;
-  min-height: 70vh;
-  padding: 1em;
-  border: 1px solid #707070; 
+  min-height: 50vh;
+  padding: 0 .25em;
+  /* border: 1px solid #707070;  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +46,6 @@ Layout
 
 .banner {
   width: 100vw;
-  margin: 1em;
   padding: .25em;
   text-align: center;
   background: #BFC1B5;
@@ -84,20 +81,29 @@ Typography
 .mainTitle,
 .subHeading {
   text-align: center;
+  max-width: 500px;
 }
 
 .mainTitle {
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: .4em;
+  padding-bottom: .25em;
+
 }
 
 .subHeading {
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding-bottom: 2.5em;
 }
 
-
+.banner {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
 
 /* @media (max-width: 600px) {
   .grid {
