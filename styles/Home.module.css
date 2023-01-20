@@ -38,7 +38,6 @@ Layout
   width: 90%;
   min-height: 50vh;
   padding: 0 .25em;
-  /* border: 1px solid #707070;  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +48,7 @@ Layout
   padding: .25em;
   text-align: center;
   background: #BFC1B5;
+  margin-bottom: 2.5em;
 }
 
 /* Images */
@@ -72,6 +72,14 @@ Layout
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.workLink {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5em;
 }
 
 /* ==========
@@ -101,6 +109,7 @@ Typography
 }
 
 .banner {
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: .2em;
 }
@@ -121,6 +130,7 @@ Typography
     background: #111;
   }
   .logo img {
+
     filter: invert(1);
   }
 } */

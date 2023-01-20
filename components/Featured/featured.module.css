@@ -1,3 +1,59 @@
+/* ============
+Features Layout
+============ */
+
+.projectContainer {
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.projectContainer span {
+    display: block;
+}
+
+.title {
+    margin-bottom: 3em;
+}
+
+.projectName {
+    margin-bottom: 1em;
+}
+
+.projectType {
+    margin-bottom: .5em;
+}
+
+
+/* Images */
+
+.imageWrapper {
+    border: 2px solid black;
+    max-width: 500px;
+    margin-bottom:  2.5em;
+}
+
+/* ===========
+Typography
+============ */
+.title,
+.projectType,
+.projectName {
+    text-transform: uppercase;
+    letter-spacing: .625rem;
+}
+
 .title {
     text-align: center;
+    letter-spacing: .625rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.projectType {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
 }

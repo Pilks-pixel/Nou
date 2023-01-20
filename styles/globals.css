@@ -9,6 +9,7 @@ body {
 
 * {
   box-sizing: border-box;
+  /* background: rgba(0 100 0 / 0.05) !important; */
 }
 
 
@@ -17,6 +18,9 @@ a {
   color: inherit;
   text-decoration: none;
   padding: .25em;
+  font-family: neue-haas-unica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 a:hover {

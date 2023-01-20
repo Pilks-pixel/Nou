@@ -37,7 +37,7 @@ export default function Home() {
 						and websites that elevate and up level your business
 					</span>
 					<div className={utilStyles.btn}>
-						<span>Work with us</span>
+						<span>Say Hello</span>
 					</div>
 				</section>
 			</main>
@@ -46,8 +46,13 @@ export default function Home() {
 				<div className={styles.banner}>
 					<h3>your business needs memorable branding</h3>
 				</div>
+			  <Featured />
+        <Link href='/work' className={styles.workLink} >All Projects</Link>
 			</section>
-			<Featured />
+
+      <section className={styles.servicesContainer}>
+        
+      </section>
 
 			<footer className={styles.footer}>
 				<a
