@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
 import Nav from "../components/Nav/Nav";
+import Service from "../components/Service/Service";
 import Featured from "../components/featured/featured";
+import Info from "../components/Info/Info";
   
 
 export default function Home() {
@@ -42,32 +44,37 @@ export default function Home() {
 				</section>
 			</main>
 
-			<section>
+			<section id='projects'>
 				<div className={styles.banner}>
 					<h3>your business needs memorable branding</h3>
 				</div>
 			  <Featured />
-        <Link href='/work' className={styles.workLink} >All Projects</Link>
+        <Link href='/work' className={utilStyles.pageLink} >All Projects</Link>
 			</section>
 
       <section className={styles.servicesContainer}>
-        
+        <Service />
       </section>
 
-			<footer className={styles.footer}>
-				<a
-					href='https://www.instagram.com/noudesign.studio/'
-					target='_blank'
-					className={styles.social}
-				>
-					<Image
-						src='/icons8-instagram-50.png'
-						alt='instagram link'
-						width={40}
-						height={40}
-						className={styles.social}
-					/>
-				</a>
+      <section className={styles.contactContainer}>
+        <div className={styles.topInnerContactContainer}>
+          <h3 className={`${styles.darkGreyBoxContent}`}>Get in contact</h3>
+        </div>
+
+        <div className={styles.darkGreyBox}></div>
+        <div className={styles.bottomInnerContactContainer}>
+          <p>Are you ready to take your business to the next level?</p>
+          <p>Are you ready to take your business to the next level?
+             Please fill out the form below so we can get an idea of your project needs. 
+             Please allow 2 business days to hear back from us
+          </p>
+        <Link href='/services' className={utilStyles.pageLink} >Let's Begin</Link>
+        </div>
+
+      </section>
+
+			<footer className={utilStyles.container}>
+        <Info />
 			</footer>
 		</div>
 	);

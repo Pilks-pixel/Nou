@@ -1,0 +1,17 @@
+/* =========================
+Services Layout / Typography
+=========================== */
+
+.designService {
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.designService p {
+    font-size: .8125rem;
+    letter-spacing: 2px;
+}

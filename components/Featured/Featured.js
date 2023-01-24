@@ -6,7 +6,7 @@ const Featured = () => {
 
   return (
     <div className={utilStyles.container}>
-        <h3 className={styles.title}>featured work</h3>
+        <h3 className={utilStyles.sectionTitle}>featured work</h3>
         <div className={styles.projectContainer}>
           <div className={styles.imageWrapper}>
             <Image 

@@ -15,10 +15,6 @@ Features Layout
     display: block;
 }
 
-.title {
-    margin-bottom: 3em;
-}
-
 .projectName {
     margin-bottom: 1em;
 }
@@ -39,18 +35,11 @@ Features Layout
 /* ===========
 Typography
 ============ */
-.title,
+
 .projectType,
 .projectName {
     text-transform: uppercase;
     letter-spacing: .625rem;
-}
-
-.title {
-    text-align: center;
-    letter-spacing: .625rem;
-    font-weight: 600;
-    font-size: 1.25rem;
 }
 
 .projectType {
