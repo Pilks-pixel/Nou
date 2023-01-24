@@ -20,7 +20,7 @@ export default function Home() {
 
 			<header className={styles.header}>
 				<Image
-					src='/asset1.svg'
+					src='/noufiles_15.png'
 					alt='nou logo'
 					width={75}
 					height={18}
@@ -38,8 +38,8 @@ export default function Home() {
 						Inspired by Minimalism and fascinated by technology, we craft brands
 						and websites that elevate and up level your business
 					</span>
-					<div className={utilStyles.btn}>
-						<span>Say Hello</span>
+					<div className={utilStyles.pageLink}>
+						<Link href={'/contact'} className={styles.contactLink}>Say Hello</Link>
 					</div>
 				</section>
 			</main>
@@ -58,7 +58,7 @@ export default function Home() {
 
       <section className={styles.contactContainer}>
         <div className={styles.topInnerContactContainer}>
-          <h3 className={`${styles.darkGreyBoxContent}`}>Get in contact</h3>
+          <h3 className={styles.darkGreyBoxContent}>Get in contact</h3>
         </div>
 
         <div className={styles.darkGreyBox}></div>

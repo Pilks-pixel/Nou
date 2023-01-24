@@ -12,7 +12,7 @@ Util Layout
   }  
 
   /* buttons  */
-.btn {
+/* .btn {
     background-color: #E6E6E4;
     font-family: inherit;
     padding: .5em 1em;
@@ -24,7 +24,7 @@ Util Layout
 .btn:hover {
     cursor: pointer;
     opacity: .5;
-}
+} */
 
 
 /* Links */

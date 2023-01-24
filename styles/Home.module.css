@@ -14,7 +14,6 @@ Layout
 
 .main, 
 .servicesContainer{
-  /* min-height: 70vh; */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -28,8 +27,7 @@ Layout
 .hero {
   background: #F5F5EF;
   width: 90%;
-  min-height: 50vh;
-  padding: 0 .25em;
+  padding: 3em .25em .25em .25em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +63,6 @@ Layout
 .bottomInnerContactContainer {
   padding: 4.444em 2.5em ;
   background: #F7F7F7;
-  line-height: 1.5;
   grid-column: 1 / -1;
   grid-row: 3 / 8;
 }
@@ -95,6 +92,13 @@ Layout
   width: 25vw;
 } 
 
+/* Links */
+.contactLink {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 
 /* ==========
 Typography
@@ -109,7 +113,7 @@ Typography
 .mainTitle {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 2.18rem;
   letter-spacing: .4em;
   padding-bottom: .25em;
 
@@ -118,7 +122,7 @@ Typography
 .subHeading {
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: .875rem;
   padding-bottom: 2.5em;
 }
 

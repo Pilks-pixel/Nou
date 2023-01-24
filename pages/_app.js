@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import {Bai_Jamjuree} from '@next/font/google'
+import React from "react";
+
 
   const baiJamjuree = Bai_Jamjuree({
     weight:['500', '700'],
