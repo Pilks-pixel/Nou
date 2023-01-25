@@ -9,8 +9,30 @@ import Featured from "../components/featured/featured";
 import Info from "../components/Info/Info";
 import Media from 'react-media';  
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  
+
+
+
+  // useEffect(()=> {
+
+  //   // function getWindowSize() {
+  //   //   const {innerWidth, innerHeight} = window;
+  //   //   console.log(innerWidth)
+  //   //   return {innerWidth, innerHeight};
+  //   // }
+
+  //   let servicesMediaQuery = (<Media query={'(max-width: 479px)'}>
+  //   {matches => matches?
+  //    <Service /> :
+  //    <ServiceGrid />
+  //   }
+  //   </Media>)
+
+  // },[]);
 
 	return (
 		<div className={utilStyles.container}>
@@ -55,12 +77,12 @@ export default function Home() {
 			</section>
 
       <section className={styles.servicesContainer}>
-        <Media query={'(max-width: 479px)'}>
-            {matches => matches?
-             <Service /> :
-             <ServiceGrid />
-            }
-        </Media>
+        <div className={styles.mobile}>
+          <Service />
+        </div>
+        <div className={styles.desktop}>
+          <ServiceGrid />
+        </div>
       </section>
 
       <section className={styles.contactContainer}>
