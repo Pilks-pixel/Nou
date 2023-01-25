@@ -7,7 +7,8 @@ import Nav from "../components/Nav/Nav";
 import Service from "../components/Service/Service";
 import Featured from "../components/featured/featured";
 import Info from "../components/Info/Info";
-  
+import Media from 'react-media';  
+import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 
 export default function Home() {
 
@@ -20,10 +21,10 @@ export default function Home() {
 
 			<header className={styles.header}>
 				<Image
-					src='/noufiles_15.png'
+					src='/noufiles_large.png'
 					alt='nou logo'
-					width={75}
-					height={18}
+					width={62.5}
+					height={37.5}
 					layout='intrinsic'
 				/>
 				{/* <Nav /> */}
@@ -44,16 +45,22 @@ export default function Home() {
 				</section>
 			</main>
 
-			<section id='projects'>
+			<section className={styles.projects}>
 				<div className={styles.banner}>
 					<h3>your business needs memorable branding</h3>
 				</div>
+        <h3 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>featured work</h3>
 			  <Featured />
-        <Link href='/work' className={utilStyles.pageLink} >All Projects</Link>
+        <Link href='/work' className={styles.projectsLink} >All Projects</Link>
 			</section>
 
       <section className={styles.servicesContainer}>
-        <Service />
+        <Media query={'(max-width: 479px)'}>
+            {matches => matches?
+             <Service /> :
+             <ServiceGrid />
+            }
+        </Media>
       </section>
 
       <section className={styles.contactContainer}>

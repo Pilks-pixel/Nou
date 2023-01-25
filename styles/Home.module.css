@@ -33,12 +33,36 @@ Layout
   align-items: center;
 }
 
+/* Project Grid Container */
+.projects {
+  display: grid;
+  grid-template: repeat(4, auto) / 1fr 60% 1fr;
+}
+
 .banner {
   width: 100vw;
   padding: .25em;
   text-align: center;
   background: #BFC1B5;
   margin-bottom: 2.5em;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.projectsTitle {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+
+}
+
+.projectsLink {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  justify-self: start;
+  font-size: 1rem;
+  padding-left: .1em;
+  display: block;
+  margin-bottom: 4em;
 }
 
 .servicesContainer {
@@ -113,7 +137,7 @@ Typography
 .mainTitle {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2.18rem;
+  font-size: 1.75rem;
   letter-spacing: .4em;
   padding-bottom: .25em;
 
@@ -127,9 +151,10 @@ Typography
 }
 
 .banner {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: .2em;
+  font-size: 1rem;
+  font-family: neue-haas-unica, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: .375em;
 }
 
 .darkGreyBoxContent {
@@ -143,7 +168,9 @@ Typography
 }
 
 .bottomInnerContactContainer p {
-  font-size: 1.125rem;
+  font-size: .75rem;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
 }
 
 @media (min-width: 480px) {
@@ -154,6 +181,15 @@ Typography
   .darkGreyBox {
     grid-column: 3 / span 1;
 
+  }
+
+  .projectsLink {
+    justify-self: center;
+    /* font-size: 1.5rem; */
+  }
+
+  .servicesContainer {
+    margin-bottom: 5em;
   }
 }
 

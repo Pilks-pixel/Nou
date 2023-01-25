@@ -13,8 +13,8 @@ const Info = () => {
             <Image
             src='/noufiles_15.png'
             alt='nou logo'
-            width={57}
-            height={14}
+            width={50}
+            height={15}
             layout='intrinsic'
             />
           </div>

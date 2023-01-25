@@ -7,8 +7,10 @@ Features Layout
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    align-items: center;
+    align-items: flex-start;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    justify-self: center;
 }
 
 .projectContainer span {
@@ -20,7 +22,7 @@ Features Layout
 }
 
 .projectType {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 
@@ -29,7 +31,7 @@ Features Layout
 .imageWrapper {
     border: 2px solid black;
     max-width: 500px;
-    margin-bottom:  2.5em;
+    margin-bottom:  2em;
 }
 
 /* ===========
@@ -38,11 +40,18 @@ Typography
 
 .projectType,
 .projectName {
-    text-transform: uppercase;
-    letter-spacing: .625rem;
+    color: #252525;
 }
 
 .projectType {
-    font-size: 2.5rem;
-    letter-spacing: 1rem;
+    font-size: 1rem;
+    letter-spacing: 6.4px;
+    text-transform: uppercase;
+}
+
+.projectName {
+    font-size: 0.875;
+    font-weight: 200;
+    letter-spacing: 4.2px;
+    text-transform: capitalize;
 }

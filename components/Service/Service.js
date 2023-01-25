@@ -53,7 +53,7 @@ const Service = () => {
 			<div className={styles.designService}>
 				<h3>02/ Full Brand Design</h3>
 				<p onClick={handleClick} id={"brand"} className={styles.serviceBtn}>
-					includes <i class="fa-solid fa-caret-down"></i>
+					includes <i className="fa-solid fa-caret-down"></i>
 				</p>
 				{brandServicesToggle && (
 					<div className={styles.showServiceContent}>

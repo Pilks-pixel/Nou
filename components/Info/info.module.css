@@ -92,5 +92,6 @@ Typography
 @media (min-width: 435px) {
   .footerLinksContainer .logo {
     order: 4;
+    align-self: center;
   }
 }
