@@ -8,15 +8,17 @@ const Info = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerLinksContainer}>
-        <div className={styles.logo}>
+        <div className={styles.logoContainer}>
           <div className={styles.logoImg}>
             <Image
             src='/noufiles_15.png'
             alt='nou logo'
-            width={50}
-            height={15}
-            layout='intrinsic'
+            width={400}
+            height={120}
+            layout='responsive'
             />
+
+
           </div>
           <span className={styles.logoSubTitle}>Based in London / Spain</span>
           <span className={styles.logoSubTitle}>Partnering worldwide</span>

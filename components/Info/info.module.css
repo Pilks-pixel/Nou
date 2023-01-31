@@ -14,7 +14,8 @@ Info Layout
   align-items: flex-start;
 }  
 
-.footerLinksContainer div {
+.footerLink,
+.logoContainer {
     flex: 1 200px;
     display: flex;
     flex-direction: column;
@@ -45,8 +46,9 @@ Info Layout
 
 /* Images */
 
-.footerLinksContainer .logoImg{
-  max-height: 16px;
+.logoImg{
+  /* height: 2rem; */
+  width: 2.5rem;
   padding-top: 4px;
   margin-bottom: .625rem;
  }
@@ -90,7 +92,7 @@ Typography
 }
 
 @media (min-width: 435px) {
-  .footerLinksContainer .logo {
+  .footerLinksContainer .logoContainer {
     order: 4;
     align-self: center;
   }

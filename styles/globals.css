@@ -27,7 +27,36 @@ a:hover {
   color: #9F9C93;
 }
 
+/* ==============
+Projects Carousel
+=============== */
+.swiper {
+  outline: 2px solid blue;
+}
 
+.swiper-slide {
+  border-right: 2px solid rgba(159, 156, 147, .25);
+  display: flex;
+  justify-content: center;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+}
+
+
+@media (min-width: 480px) {
+  .swiper-slide {
+    padding-left: 15px;
+    padding-right: 30px;
+  }
+
+  @media (min-width:768px) {
+    .swiper-slide {
+      padding-left: 10px;
+      padding-right: 40px;
+    }
+  }
+
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -37,3 +66,4 @@ a:hover {
     background: black;
   }
 } */
+

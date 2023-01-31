@@ -7,32 +7,12 @@ import Nav from "../components/Nav/Nav";
 import Service from "../components/Service/Service";
 import Featured from "../components/featured/featured";
 import Info from "../components/Info/Info";
-import Media from 'react-media';  
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
-import { useEffect, useState } from "react";
+
+
 
 export default function Home() {
 
-  
-
-
-
-  // useEffect(()=> {
-
-  //   // function getWindowSize() {
-  //   //   const {innerWidth, innerHeight} = window;
-  //   //   console.log(innerWidth)
-  //   //   return {innerWidth, innerHeight};
-  //   // }
-
-  //   let servicesMediaQuery = (<Media query={'(max-width: 479px)'}>
-  //   {matches => matches?
-  //    <Service /> :
-  //    <ServiceGrid />
-  //   }
-  //   </Media>)
-
-  // },[]);
 
 	return (
 		<div className={utilStyles.container}>
@@ -42,13 +22,15 @@ export default function Home() {
 			</Head>
 
 			<header className={styles.header}>
-				<Image
-					src='/noufiles_large.png'
-					alt='nou logo'
-					width={62.5}
-					height={37.5}
-					layout='intrinsic'
-				/>
+        <div className={styles.headerImage}>
+          <Image
+            src='/noufiles_large.png'
+            alt='nou logo'
+            width={62.5}
+            height={37.5}
+            layout='responsive'
+          />
+        </div>
 				{/* <Nav /> */}
 			</header>
 
@@ -72,7 +54,10 @@ export default function Home() {
 					<h3>your business needs memorable branding</h3>
 				</div>
         <h3 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>featured work</h3>
-			  <Featured />
+        <div className={styles.slider}>
+          <Featured />
+
+        </div>
         <Link href='/work' className={styles.projectsLink} >All Projects</Link>
 			</section>
 

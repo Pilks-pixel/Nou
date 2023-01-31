@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import {Bai_Jamjuree} from '@next/font/google'
-import React from "react";
+import React, { useRef, useState } from "react";
+
 
 
   const baiJamjuree = Bai_Jamjuree({

@@ -3,14 +3,18 @@ Features Layout
 ============ */
 
 .projectContainer {
-    opacity: .5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-top: 1em;
+    /* background: gray;    */
+    /* width: 90%; */
+    /* opacity: .5;
+    align-items: flex-start;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    justify-self: center;
+    justify-self: center; */
 }
 
 .projectContainer span {
@@ -32,6 +36,16 @@ Features Layout
     border: 2px solid black;
     max-width: 500px;
     margin-bottom:  2em;
+    transition: transform 1s ease;
+}
+
+.imageWrapper:hover,
+.imageWrapper:focus {
+    cursor: pointer;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.05); 
+    
 }
 
 /* ===========
