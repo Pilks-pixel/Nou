@@ -19,7 +19,7 @@ export default function Home() {
 			</Head>
 
 			<header className={styles.header}>
-				<div className={styles.headerImage}>
+				{/* <div className={styles.headerImage}>
 					<Image
 						src='/noufiles_large.png'
 						alt='nou logo'
@@ -27,8 +27,8 @@ export default function Home() {
 						height={37.5}
 						layout='responsive'
 					/>
-				</div>
-				{/* <Nav /> */}
+				</div> */}
+				<Nav />
 			</header>
 
 			<main className={styles.main}>

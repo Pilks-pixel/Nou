@@ -2,18 +2,17 @@
 .nav {
     margin: 0 auto;
     /* width: 90%; */
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: flex-start; */
+    justify-content: space-between; 
     border: 2px black solid;
 }
 
-.container {
+.containerPrimary {
     padding: .5em;
     margin: 0;
     display: flex;
-    flex-direction: row;
     gap: .6em;
     list-style-type: none;
     font-size: 1rem;
@@ -21,5 +20,21 @@
     text-transform: capitalize;
     /* justify-content: center;
     align-items: center; */
+}
+
+.containerLogo {
+    /* min-width: 25%; */
+}
+
+.logo {
+    max-width: 80px;
+    height: auto;
+    /* object-fit: contain; */
+}
+
+@media (min-width: 768px) {
+    .logo {
+        max-width: 100px;
+    }
 }
 

@@ -37,12 +37,8 @@ Projects Carousel
 
 .swiper-slide {
   border-right: 2px solid rgba(159, 156, 147, .25);
-  /* border-left: 2px solid rgba(159, 156, 147, .25); */
   display: flex;
   justify-content: center;
-  /* margin: 0 10px; */
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
 }
 
 
