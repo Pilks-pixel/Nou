@@ -1,6 +1,9 @@
 /* ============
 Features Layout
 ============ */
+.slideContainer {
+    margin: 0 1rem;
+}
 
 .projectContainer {
     display: flex;
@@ -8,6 +11,8 @@ Features Layout
     justify-content: center;
     align-items: flex-start;
     padding-top: 1em;
+    margin-left: 10px;
+    margin-right: 10px;
     /* background: gray;    */
     /* width: 90%; */
     /* opacity: .5;
@@ -32,20 +37,37 @@ Features Layout
 
 /* Images */
 
-.imageWrapper {
+/* .imageWrapper {
     border: 2px solid black;
     max-width: 500px;
     margin-bottom:  2em;
     transition: transform 1s ease;
+} */
+
+/* .imageWrapper:hover,
+.imageWrapper:focus {
+    cursor: pointer;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.05); 
+} */
+
+.projectImg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-bottom:  2em;
+    transition: transform 1s ease;
 }
 
-.imageWrapper:hover,
-.imageWrapper:focus {
+.projectImg:hover,
+.projectImg:focus {
     cursor: pointer;
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.05); 
-    
 }
 
 /* ===========

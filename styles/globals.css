@@ -31,13 +31,16 @@ a:hover {
 Projects Carousel
 =============== */
 .swiper {
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
+  
 }
 
 .swiper-slide {
   border-right: 2px solid rgba(159, 156, 147, .25);
+  /* border-left: 2px solid rgba(159, 156, 147, .25); */
   display: flex;
   justify-content: center;
+  /* margin: 0 10px; */
   /* padding-left: 10px; */
   /* padding-right: 10px; */
 }
