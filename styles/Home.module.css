@@ -6,10 +6,9 @@ Layout
 .header {
   /* display: flex;
   justify-content: flex-end; */
-  /* margin: 0 auto; */
-  padding: 1em;
+  width: 98%;
+  margin: 0 auto;
   background: #F5F5EF;
-  /* border: 2px solid black; */
 }
 
 .main, 
@@ -42,7 +41,7 @@ Layout
 
 .banner {
   width: 100vw;
-  padding: .25em;
+  padding: .5em;
   text-align: center;
   background: #BFC1B5;
   margin-bottom: 2.5em;
@@ -59,6 +58,8 @@ Layout
 .slider {
   /* grid-column: 1 / -1; */
   /* grid-row: 3 / 4; */
+  margin-bottom: 1em;
+  /* outline: 2px solid hotpink; */
 }
 
 .projectsLink {
