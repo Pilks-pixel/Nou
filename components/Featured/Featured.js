@@ -84,7 +84,7 @@ const Featured = () => {
 						<div className={styles.projectContainer}>
 							<Image
 								className={styles.projectImg}
-								src='/silk_28.png'
+								src='/silk_sense_edited.png'
 								height={430}
 								width={270}
 							/>
