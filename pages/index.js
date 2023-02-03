@@ -12,22 +12,13 @@ import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 export default function Home() {
   
 	return (
-		<div className={utilStyles.container}>
-			<Head>
+        <div className={utilStyles.container}>
+    <Head>
 				<title>Nou Design Studio</title>
 				<meta name='Nou design studio' content='Nou homepage' />
 			</Head>
 
-			<header className={styles.header}>
-				{/* <div className={styles.headerImage}>
-					<Image
-						src='/noufiles_large.png'
-						alt='nou logo'
-						width={62.5}
-						height={37.5}
-						layout='responsive'
-					/>
-				</div> */}
+			<header>
 				<Nav />
 			</header>
 

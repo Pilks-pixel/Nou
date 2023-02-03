@@ -1,6 +1,9 @@
 import Head from "next/head"
 import Link from 'next/link'
+import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css"
+import Nav from "../../components/Nav/Nav";
+
 
 export default function About() {
   
@@ -8,12 +11,23 @@ export default function About() {
         <div className={utilStyles.container}>
         <Head>
         <title>About</title>
-      </Head>
+        
+        </Head>
+
+      <header>
+				<Nav />
+			</header>
+
       <main>
-        <h1>This is the about page</h1>
-        <Link href='/'>
-            Home
-        </Link>
+        <h2>About me</h2>
+        <Image
+        className=""
+        src='/about_me.png'
+        height={400}
+        width={350}
+        >
+
+        </Image>
         <section>
           <p>Example text about us</p>
         </section>

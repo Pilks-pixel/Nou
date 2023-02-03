@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Link from 'next/link'
 import styles from '../../styles/Services.module.css'
+import Nav from "../../components/Nav/Nav";
 
 
 export default function Services() {
@@ -10,6 +11,11 @@ export default function Services() {
       <Head>
       <title>Services</title>
     </Head>
+
+      <header>
+				<Nav />
+		  </header>
+
     <main>
       <h1>This is the services page</h1>
       <Link href='/'>

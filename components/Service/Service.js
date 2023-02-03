@@ -2,9 +2,8 @@ import utilStyles from "../../styles/utils.module.css";
 import styles from "./service.module.css";
 import { useState, useEffect } from "react";
 
-
 const Service = () => {
-
+	
 	const [logoServicesToggle, setLogoServicesToggle] = useState(false);
 	const [brandServicesToggle, setBrandServicesToggle] = useState(false);
 	const [webServicesToggle, setWebServicesToggle] = useState(false);
@@ -34,7 +33,7 @@ const Service = () => {
 			<div className={styles.designService}>
 				<h3>01/ Logo Design</h3>
 				<p onClick={handleClick} id={"logo"} className={styles.serviceBtn}>
-					includes <i class="fa-solid fa-caret-down"></i>
+					includes <i class='fa-solid fa-caret-down'></i>
 				</p>
 				{logoServicesToggle && (
 					<div className={styles.showServiceContent}>
@@ -53,7 +52,7 @@ const Service = () => {
 			<div className={styles.designService}>
 				<h3>02/ Full Brand Design</h3>
 				<p onClick={handleClick} id={"brand"} className={styles.serviceBtn}>
-					includes <i className="fa-solid fa-caret-down"></i>
+					includes <i className='fa-solid fa-caret-down'></i>
 				</p>
 				{brandServicesToggle && (
 					<div className={styles.showServiceContent}>
@@ -74,7 +73,7 @@ const Service = () => {
 			<div className={styles.designService}>
 				<h3>03/ Web Design</h3>
 				<p onClick={handleClick} id={"web"} className={styles.serviceBtn}>
-					includes <i class="fa-solid fa-caret-down"></i>
+					includes <i class='fa-solid fa-caret-down'></i>
 				</p>
 				{webServicesToggle && (
 					<div className={styles.showServiceContent}>

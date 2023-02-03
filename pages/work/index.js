@@ -2,6 +2,7 @@ import Head from "next/head"
 import Link from 'next/link'
 import Featured from "../../components/featured/featured";
 import styles from '../../styles/Work.module.css'
+import Nav from "../../components/Nav/Nav";
 
 
 export default function Work() {
@@ -11,11 +12,13 @@ export default function Work() {
             <Head>
                 <title>Work</title>
             </Head>
+
+            <header>
+				<Nav />
+			</header>
+
             <main>
-                <h1>This is the work page</h1>
-                <Link href='/'>
-                    Home
-                </Link>
+               
                 <section>
                     <p>Example text about us</p>
                     <Featured />

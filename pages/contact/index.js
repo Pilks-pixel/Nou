@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Link from 'next/link'
 import styles from '../../styles/Contact.module.css'
+import Nav from "../../components/Nav/Nav";
 
 
 
@@ -11,6 +12,11 @@ export default function Contact() {
           <Head>
           <title>Contact</title>
         </Head>
+
+        <header>
+				  <Nav />
+			  </header>
+
         <main>
           <h1>This is the contact page</h1>
           <Link href='/'>

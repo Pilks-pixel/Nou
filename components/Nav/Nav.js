@@ -2,16 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./nav.module.css";
 import { useState } from "react";
-
+import { useRouter } from "next/router";
 
 export default function Nav() {
+	const [mobileNav, setMobileNav] = useState(false);
+	const router = useRouter();
 
-const [mobileNav ,setMobileNav] = useState(false);
-
-const handleClick = () => {
-  setMobileNav(prevMobile => !prevMobile)
-  console.log({mobileNav})
-}
+	const handleClick = () => {
+		setMobileNav(prevMobile => !prevMobile);
+		console.log({ mobileNav }, router.pathname, "the router path");
+	};
 
 	return (
 		<>
@@ -22,32 +22,55 @@ const handleClick = () => {
 					alt='nou logo'
 					width={260}
 					height={150}
-					// style={{
-					//   maxwidth: "200px",
-					//   height: "auto",}}
 				/>
 
-				<button 
-        className={styles.mobileNavToggle}
-        aria-controls='navPrimary' 
-        aria-expanded={mobileNav}
-        onClick={handleClick}
-        >
+				<button
+					className={styles.mobileNavToggle}
+					aria-controls='navPrimary'
+					aria-expanded={mobileNav}
+					onClick={handleClick}
+				>
 					<span className={styles.srOnly}>Menu</span>
 				</button>
 
-				<ul className={ mobileNav? styles.navPrimary : `${styles.navPrimary} ${styles.navPrimaryHidden}`}>
+				<ul
+					className={
+						mobileNav? styles.navPrimary
+							: `${styles.navPrimary} ${styles.navPrimaryHidden}`
+					}
+				>
 					<li>
-						<Link href='/' onClick={handleClick} >home</Link>
+						<Link
+							href='/'
+							onClick={handleClick}
+							className={router.asPath === "/" ? styles.activePage : ""}
+						>
+							home
+						</Link>
 					</li>
 					<li>
-						<Link href='/services'>about</Link>
+						<Link
+							href='/about'
+							className={router.asPath === "/about" ? styles.activePage : ""}
+						>
+							about
+						</Link>
 					</li>
 					<li>
-						<Link href='/work'>projects</Link>
+						<Link
+							href='/work'
+							className={router.asPath === "/work" ? styles.activePage : ""}
+						>
+							projects
+						</Link>
 					</li>
 					<li>
-						<Link href='/contact'>contact</Link>
+						<Link
+							href='/contact'
+							className={router.asPath === "/contact" ? styles.activePage : ""}
+						>
+							contact
+						</Link>
 					</li>
 				</ul>
 			</nav>

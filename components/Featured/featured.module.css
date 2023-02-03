@@ -2,65 +2,49 @@
 Features Layout
 ============ */
 .slideContainer {
-    margin: 0 1rem;
+	margin: 0 1rem;
 }
 
 .projectContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 1em;
-    margin-left: 10px;
-    margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 1em;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .projectContainer span {
-    display: block;
+	display: block;
 }
 
 .projectName {
-    margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .projectType {
-    margin-bottom: 1em;
+	margin-bottom: 1em;
 }
-
 
 /* Images */
 
-/* .imageWrapper {
-    border: 2px solid black;
-    max-width: 500px;
-    margin-bottom:  2em;
-    transition: transform 1s ease;
-} */
-
-/* .imageWrapper:hover,
-.imageWrapper:focus {
-    cursor: pointer;
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1); 
-    transform: scale(1.05); 
-} */
-
 .projectImg {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    margin-bottom:  2em;
-    transition: transform 1s ease;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 7.5px;
+	max-width: 500px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2em;
+	transition: transform 1s ease;
 }
 
 .projectImg:hover,
 .projectImg:focus {
-    cursor: pointer;
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.05); 
+	cursor: pointer;
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.05);
 }
 
 /* ===========
@@ -69,18 +53,18 @@ Typography
 
 .projectType,
 .projectName {
-    color: #252525;
+	color: #252525;
 }
 
 .projectType {
-    font-size: 1rem;
-    letter-spacing: 6.4px;
-    text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 6.4px;
+	text-transform: uppercase;
 }
 
 .projectName {
-    font-size: 0.875;
-    font-weight: 200;
-    letter-spacing: 4.2px;
-    text-transform: capitalize;
+	font-size: 0.875;
+	font-weight: 200;
+	letter-spacing: 4.2px;
+	text-transform: capitalize;
 }

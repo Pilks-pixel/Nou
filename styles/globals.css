@@ -1,61 +1,65 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, Roboto, sans-serif; 
-  color: #252525;
-  line-height: 1.5;
-  overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, Roboto, sans-serif;
+	color: #252525;
+	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 * {
-  box-sizing: border-box;
-  /* background: rgba(0 100 0 / 0.05) !important; */
+	box-sizing: border-box;
+	/* background: rgba(0 100 0 / 0.05) !important; */
 }
 
+header {
+	margin: 0 auto;
+	background: #f5f5ef;
+	padding: 0 min(2em, 4vw);
+}
 
 /* Links */
 a {
-  color: inherit;
-  text-decoration: none;
-  padding: .25em;
-  font-family: neue-haas-unica, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+	color: inherit;
+	text-decoration: none;
+	padding: 0.25em;
+	font-family: neue-haas-unica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: all 500ms ease;
 }
 
-a:hover {
-  color: #9F9C93;
+a:hover,
+a:focus {
+	color: #9f9c93;
 }
 
 /* ==============
 Projects Carousel
 =============== */
 .swiper {
-  /* outline: 2px solid blue; */
-  
+	/* outline: 2px solid blue; */
 }
 
 .swiper-slide {
-  border-right: 2px solid rgba(159, 156, 147, .25);
-  display: flex;
-  justify-content: center;
+	border-right: 2px solid rgba(159, 156, 147, 0.25);
+	display: flex;
+	justify-content: center;
 }
 
-
 @media (min-width: 480px) {
-  .swiper-slide {
-    padding-left: 15px;
-    padding-right: 30px;
-  }
+	.swiper-slide {
+		padding-left: 15px;
+		padding-right: 30px;
+	}
 
-  @media (min-width:768px) {
-    .swiper-slide {
-      padding-left: 10px;
-      padding-right: 40px;
-    }
-  }
-
+	@media (min-width: 768px) {
+		.swiper-slide {
+			padding-left: 10px;
+			padding-right: 40px;
+		}
+	}
 }
 /* @media (prefers-color-scheme: dark) {
   html {
@@ -66,4 +70,3 @@ Projects Carousel
     background: black;
   }
 } */
-
