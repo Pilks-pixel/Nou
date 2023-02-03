@@ -1,0 +1,15 @@
+.aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 40% 40%;
+}
+
+.aboutImg {
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.title {
+    transform: rotate(-90deg);
+    height: max-content;
+}

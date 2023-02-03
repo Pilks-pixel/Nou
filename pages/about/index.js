@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css"
 import Nav from "../../components/Nav/Nav";
+import styles from "../../styles/About.module.css"
 
 
 export default function About() {
@@ -18,18 +19,22 @@ export default function About() {
 				<Nav />
 			</header>
 
-      <main>
-        <h2>About me</h2>
+      <main className={styles.aboutContainer}>
+        <h2 className={styles.title}>About me</h2>
         <Image
-        className=""
+        className={styles.aboutImg}
         src='/about_me.png'
         height={400}
         width={350}
+        alt='Picture of Horten, Nou Design Founder'
         >
-
         </Image>
         <section>
-          <p>Example text about us</p>
+          <p>Hey there, I am Horten, a visual designer specialised in minimalism Branding & Web Design</p>
+            
+          <p>I believe in creating Visual Designs with purpose, that are timeless &</p>
+
+          <p>She / Her . proud Spanish / British</p>
         </section>
 
 
