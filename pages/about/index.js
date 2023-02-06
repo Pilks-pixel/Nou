@@ -29,12 +29,14 @@ export default function About() {
         alt='Picture of Horten, Nou Design Founder'
         >
         </Image>
-        <section>
+        <section className={styles.aboutInfo}>
           <p>Hey there, I am Horten, a visual designer specialised in minimalism Branding & Web Design</p>
             
           <p>I believe in creating Visual Designs with purpose, that are timeless &</p>
 
-          <p>She / Her . proud Spanish / British</p>
+          <p>She / Her • proud Spanish / British</p>
+
+          <Link href='/contact'>Say Hello</Link>
         </section>
 
 
