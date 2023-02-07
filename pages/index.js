@@ -49,7 +49,7 @@ export default function Home() {
 				<div className={styles.slider}>
 					<Featured />
 				</div>
-				<Link href='/work' className={styles.projectsLink}>
+				<Link href='/work' className={`${utilStyles.pageLink} ${styles.projectsLink}`}>
 					All Projects
 				</Link>
 			</section>

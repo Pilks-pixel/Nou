@@ -51,6 +51,7 @@ export default function Nav() {
 					<li>
 						<Link
 							href='/about'
+							onClick={handleClick}
 							className={router.asPath === "/about" ? styles.activePage : ""}
 						>
 							about
@@ -59,6 +60,7 @@ export default function Nav() {
 					<li>
 						<Link
 							href='/work'
+							onClick={handleClick}
 							className={router.asPath === "/work" ? styles.activePage : ""}
 						>
 							projects
@@ -67,6 +69,7 @@ export default function Nav() {
 					<li>
 						<Link
 							href='/contact'
+							onClick={handleClick}
 							className={router.asPath === "/contact" ? styles.activePage : ""}
 						>
 							contact

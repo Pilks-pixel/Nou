@@ -6,6 +6,7 @@ body {
 	color: #252525;
 	line-height: 1.5;
 	overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -22,7 +23,7 @@ header {
 /* Links */
 a {
 	color: inherit;
-	text-decoration: underline;
+	text-decoration: none;
 	padding: 0.25em;
 	font-family: neue-haas-unica, sans-serif;
 	text-transform: uppercase;
