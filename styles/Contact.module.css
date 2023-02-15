@@ -1,4 +1,9 @@
-.container {
+.theme {
+	background-color: var(--primary-background);
+	padding: 1em;
+}
+
+.contactContainer {
     padding: 0 2rem;
   }
   
