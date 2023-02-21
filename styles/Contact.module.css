@@ -3,7 +3,56 @@
 	padding: 1em;
 }
 
+/* =============
+Contact Layout
+============= */
+
 .contactContainer {
     padding: 0 2rem;
   }
-  
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.formDescription {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  text-align: center;
+  max-width: 300px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  /* align-items: center; */
+  outline: 2px solid hotpink;
+}
+
+.textInput {
+  /* accent-color:  */
+  width: min(100%, 300px);
+}
+
+/* ==========
+Typography
+========== */
+
+.formDescription,
+.formContainer {
+  font-family: var(--text-body);
+}
+
+.formDescription {
+  font-size: 1rem;
+}
+
+.formDescription p:last-child {
+  font-size: .625rem;
+}
+
+.formContainer {
+  font-size: 0.75rem;
+}

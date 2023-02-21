@@ -87,7 +87,7 @@ export default function Contact() {
 	return (
 		<div className={utilStyles.container}>
 			<Head>
-				<title>About</title>
+				<title>Contact</title>
 			</Head>
 
 			<header>
@@ -97,8 +97,8 @@ export default function Contact() {
 			<main className={`${utilStyles.container} ${styles.theme}`}>
 				<div className={styles.contactContainer}>
 					<h2 className={styles.title}>GET IN CONTACT</h2>
-					<section>
-						<p>Are you ready to take your business to the next level?</p>
+					<section className={styles.formDescription}>
+						<p>Are you ready to take your business to <span>the next level</span>?</p>
 						<p>
 							Please fill out the form below so we can get an idea of your
 							project needs.
@@ -106,10 +106,12 @@ export default function Contact() {
 						<p>(Please allow 2 business days to hear back from us)</p>
 					</section>
 
-					<form onSubmit={handleSubmission}>
+					<form onSubmit={handleSubmission} className={styles.formContainer}>
 						<label>
 							Name{" "}
+              <br></br>
 							<input
+                className={styles.textInput}
 								name='name'
 								onChange={e => {
 									setFormData({ ...formData, customerName: e.target.value });
@@ -118,9 +120,11 @@ export default function Contact() {
 							/>
 						</label>
 
-						<label>
+						<label  >
 							Email{" "}
+              <br></br>
 							<input
+                className={styles.textInput}
 								name='email'
 								type='email'
 								onChange={e => {
@@ -132,6 +136,7 @@ export default function Contact() {
 
 						<p>
 							What service(s) are you interested in?
+            </p>
 							<label>
 								<input
 									name='branding'
@@ -140,7 +145,7 @@ export default function Contact() {
 										setFormData({ ...formData, branding: !formData.branding });
 									}}
 								/>
-								Branding
+								 Branding
 							</label>
 							<label>
 								<input
@@ -153,7 +158,7 @@ export default function Contact() {
 										});
 									}}
 								/>
-								Web Design
+								 Web Design
 							</label>
 							<label>
 								<input
@@ -163,7 +168,7 @@ export default function Contact() {
 										setFormData({ ...formData, print: !formData.print });
 									}}
 								/>
-								Print Design
+								 Print Design
 							</label>
 							<label>
 								<input
@@ -173,33 +178,38 @@ export default function Contact() {
 										setFormData({ ...formData, other: !formData.other });
 									}}
 								/>
-								Other
+								 Other
 							</label>
-						</p>
 
-						<label>
+              
+						<label htmlFor="deadlineInputId">
 							Are there any deadlines that we should be aware of?{" "}
-							<input
-								name='deadline'
-								onChange={e => {
-									setFormData({ ...formData, deadline: e.target.value });
-								}}
-								required
-							/>
-						</label>
+              <br></br>
+              <input
+                className={styles.textInput}
+                name='deadline'
+                id="deadlineInputId"
+                onChange={e => {
+                  setFormData({ ...formData, deadline: e.target.value });
+                }}
+                required
+                />
+            </label>
 
-						<label>
+						<label htmlFor="textInputId">
 							Please, describe your project below{" "}
-							<textarea
-								name='description'
-								onChange={e => {
-									setFormData({ ...formData, description: e.target.value });
-								}}
-								required
-							/>
-						</label>
+              <textarea
+                  className={styles.textInput}
+                  id="textInputId"
+                  name='description'
+                  onChange={e => {
+                    setFormData({ ...formData, description: e.target.value });
+                  }}
+                  required
+                  />
 
-						<button type='submit'>Submit</button>
+              </label>
+						<button type='submit'>Let's Go</button>
 					</form>
 
 					<ToastContainer />
