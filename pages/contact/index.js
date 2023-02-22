@@ -134,7 +134,7 @@ export default function Contact() {
 							/>
 						</label>
 
-						<p>
+						<p className={styles.formServicesTitle}>
 							What service(s) are you interested in?
             </p>
 							<label>
@@ -209,7 +209,7 @@ export default function Contact() {
                   />
 
               </label>
-						<button type='submit'>Let's Go</button>
+						<button className={styles.formBtn} type='submit'>Let's Begin</button>
 					</form>
 
 					<ToastContainer />
