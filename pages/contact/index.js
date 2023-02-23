@@ -172,6 +172,7 @@ export default function Contact() {
 							</label>
 							<label>
 								<input
+									className={styles.formCheckOther}
 									name='other'
 									type='checkbox'
 									onChange={e => {
@@ -196,8 +197,8 @@ export default function Contact() {
                 />
             </label>
 
-						<label htmlFor="textInputId">
-							Please, describe your project below{" "}
+			<label htmlFor="textInputId">
+				Please, describe your project below{" "}
               <textarea
                   className={styles.textInput}
                   id="textInputId"
@@ -208,7 +209,7 @@ export default function Contact() {
                   required
                   />
 
-              </label>
+            </label>
 						<button className={styles.formBtn} type='submit'>Let's Begin</button>
 					</form>
 
