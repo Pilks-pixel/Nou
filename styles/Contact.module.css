@@ -8,7 +8,8 @@ Contact Layout
 ============= */
 
 .contactContainer {
-    padding: 0 2rem;
+    margin: 0 auto;
+    width: 90%
   }
 
 .title {
@@ -28,7 +29,7 @@ Contact Layout
 
 .formContainer {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: .75rem;
@@ -107,4 +108,46 @@ Typography
 
 .formContainer {
   font-size: 0.75rem;
+}
+
+/* ======
+Media
+====== */
+
+@media (min-width:596px) {
+ .contactContainer {
+   display: grid;
+   grid-template-columns: minmax(100px, 1fr) 70%;
+ } 
+
+ .title {
+  transform: rotate(-90deg);
+  grid-row: 1 / 3;
+  align-self: center;
+  font-size: 2.5rem;
+  min-width: 500px;
+  margin: 0;
+  padding-bottom: 4em;
+ }
+
+ .formContainer,
+ .formDescription {
+  grid-column: 2 / -1;
+ }
+
+}
+
+@media (min-width:1000px) {
+
+  .title {
+    padding-bottom: 0;
+    padding-top: 5em;
+  }
+
+  .formContainer,
+  .formDescription {
+    justify-self: center;
+  }
+
+
 }
