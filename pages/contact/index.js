@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const endpoint = "/api/form";
 
 export default function Contact() {
+	const [warningText, setWarningText] = useState(false);
 	const [formData, setFormData] = useState({
 		customerName: "",
 		email: "",
@@ -200,11 +201,14 @@ export default function Contact() {
 			<label htmlFor="textInputId">
 				Please, describe your project below{" "}
               <textarea
-                  className={styles.textInput}
+                  className={ warningText? `${styles.textInput} ${styles.redCharacters}` : `${styles.textInput}` }
                   id="textInputId"
                   name='description'
                   onChange={e => {
                     setFormData({ ...formData, description: e.target.value });
+					console.log({warningText} ,e.target.value.length)
+					e.target.value.length > 200? setWarningText(true) 
+						: setWarningText(false)
                   }}
                   required
                   />

@@ -1,8 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import sendgrid from "@sendgrid/mail";
+import * as dotenv from 'dotenv'
+dotenv.config()
+
+const sendKey = process.env.SENDGRID_API_KEY;
+sendgrid.setApiKey(sendKey);
 
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function sendEmail(req, res) {
   try {
