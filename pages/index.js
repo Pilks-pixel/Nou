@@ -10,10 +10,9 @@ import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 
 export default function Home() {
-  
 	return (
-        <div className={utilStyles.container}>
-    <Head>
+		<div className={utilStyles.container}>
+			<Head>
 				<title>Nou Design Studio</title>
 				<meta name='Nou design studio' content='Nou homepage' />
 			</Head>
@@ -41,7 +40,7 @@ export default function Home() {
 
 			<section className={styles.projects}>
 				<div className={styles.banner}>
-					<h3>your business needs memorable branding</h3>
+					<h3 className={styles.bannerText}>your business needs memorable branding</h3>
 				</div>
 				<h3 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>
 					featured work
@@ -49,7 +48,10 @@ export default function Home() {
 				<div className={styles.slider}>
 					<Featured />
 				</div>
-				<Link href='/work' className={`${utilStyles.pageLink} ${styles.projectsLink}`}>
+				<Link
+					href='/work'
+					className={`${utilStyles.pageLink} ${styles.projectsLink}`}
+				>
 					All Projects
 				</Link>
 			</section>
