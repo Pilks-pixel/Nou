@@ -32,11 +32,15 @@ Services Grid Layout & Typography
     align-self: end;
 }
 
+
+
 .logoContent ul,
 .brandContent ul,
 .webContent ul {
     text-align: center;
-    padding: 0;
+    padding: 1em;
+    background: #bfc1b5;
+
 }
 
 .listHeading {

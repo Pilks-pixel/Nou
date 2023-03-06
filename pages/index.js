@@ -8,8 +8,52 @@ import Service from "../components/Service/Service";
 import Featured from "../components/featured/featured";
 import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
+import { useEffect, useState, useRef} from "react";
 
 export default function Home() {
+
+	// const [scrollPosition, setScrollPosition] = useState(0);
+	// const ref = useRef(null);
+
+	
+
+	// console.log({scrollPosition})
+
+	// const progressKeyFrame = [
+	// 	{width: '0'},
+	// 	{width: `${scrollPosition}`}
+	// ]
+
+	// const progressTiming = {
+	// 	duration: 3000,
+	// 	iterations: 1,
+	// 	fill: 'forwards',
+    // 	easing: 'linear',
+	// 	// delay: scrollPosition * -1000,
+
+	//   }
+
+	// const handleScroll = () => {
+	// 	// const position = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+	// 	const position = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)) * 100
+	// 	setScrollPosition(position);			
+	// };
+
+	// useEffect(()=> {
+
+	// 	ref.current.animate(progressKeyFrame, progressTiming)
+	// 	window.addEventListener('scroll', handleScroll, { passive: true });
+		
+	// 	console.log(ref.current)
+
+    // 	return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    // };
+
+	// },[])
+
+
+	
 	return (
 		<div className={utilStyles.container}>
 			<Head>
@@ -20,6 +64,8 @@ export default function Home() {
 			<header>
 				<Nav />
 			</header>
+  {/* animation-delay: calc(var(--scroll) * -1s); */}
+			{/* <div className={styles.scrollTracker} ref={ref}></div> */}
 
 			<main className={styles.main}>
 				<section className={styles.hero}>
