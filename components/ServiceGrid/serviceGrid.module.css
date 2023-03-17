@@ -2,51 +2,45 @@
 Services Grid Layout & Typography
 =============================== */
 .servicesContainer {
-    display: grid;
-    grid-template: repeat(3, auto) / repeat(2, 1fr);
-    gap: 70px;
-    margin-bottom: 4em;
-    padding: 1em;
+	display: grid;
+	grid-template: repeat(3, auto) / repeat(2, 1fr);
+	gap: 70px;
+	margin-bottom: 4em;
+	padding: 1em;
 }
 
-
 .servicesContainer li {
-    list-style-type: none;
-    margin-bottom: 1em;
-    font-family: neue-haas-unica, sans-serif;
+	list-style-type: none;
+	margin-bottom: 1em;
+	font-family: neue-haas-unica, sans-serif;
 }
 
 .logoDesign,
 .brand,
 .web {
-    align-self: center;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 4px;
+	text-transform: uppercase;
 }
 
-.logoContent
-.brandContent
-.webContent {
-    align-self: end;
+.logoContent .brandContent .webContent {
+	align-self: end;
 }
-
-
 
 .logoContent ul,
 .brandContent ul,
 .webContent ul {
-    text-align: center;
-    padding: 1em;
-    background: #bfc1b5;
-
+	text-align: center;
+	padding: 1em;
+	background: linear-gradient(rgba(191, 193, 181, 1), rgba(191, 193, 181, 0));
 }
 
 .listHeading {
-    text-align: center;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    padding-bottom: 3em;
+	text-align: center;
+	font-size: 0.75rem;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	padding-bottom: 3em;
 }

@@ -65,7 +65,7 @@ export default function Home() {
 				<Nav />
 			</header>
   {/* animation-delay: calc(var(--scroll) * -1s); */}
-			{/* <div className={styles.scrollTracker} ref={ref}></div> */}
+				{/* <div className={styles.scrollTracker} ref={ref}></div> */}
 
 			<main className={styles.main}>
 				<section className={styles.hero}>

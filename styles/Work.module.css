@@ -1,4 +1,44 @@
-.container {
-    padding: 0 2rem;
-  }
-  
+/* ===============
+Projects Layout
+=============== */
+
+.theme {
+	background-color: var(--primary-background);
+	padding: 1em;
+}
+
+.mainTitle {
+  margin: 1em 0 2em;
+}
+
+.projectContainer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.projectCard {
+  margin-bottom: 3em;
+}
+
+.projectTitle {
+  margin-top: 0;
+}
+
+.projectImg {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* =============
+Typography
+============= */
+
+.mainTitle {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}
