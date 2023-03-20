@@ -8,7 +8,7 @@ Layout
 .aboutContainer {
 	width: 90%;
 	margin: 0 auto;
-	margin-top: 1.5em;
+	padding: 1em;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 0.5em;
