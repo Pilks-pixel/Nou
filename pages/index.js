@@ -124,7 +124,7 @@ export default function Home() {
 						out the form below so we can get an idea of your project needs.
 						Please allow 2 business days to hear back from us
 					</p>
-					<Link href='/services' className={utilStyles.pageLink}>
+					<Link href='/contact' className={utilStyles.pageLink}>
 						Let's Begin
 					</Link>
 				</div>

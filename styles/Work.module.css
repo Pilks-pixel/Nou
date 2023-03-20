@@ -53,6 +53,9 @@ Projects Layout
   width: 100%;
 }
 
+.invert {
+  background-color: #bfc1b5;
+}
 /* =============
 Typography
 ============= */

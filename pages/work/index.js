@@ -8,6 +8,7 @@ import Image from "next/image";
 import Info from "../../components/Info/Info"
 
 export default function Work() {
+
 	return (
 		<div className={`${utilStyles.container} ${styles.theme}`}>
 			<Head>
@@ -59,7 +60,7 @@ export default function Work() {
 					></Image>
 				</section>
 
-				<section className={styles.projectCard}>
+				<section className={`${styles.projectCard} ${styles.invert}`}>
 					<div className={styles.projectTitle}>
 						<h2>Moane</h2>
 						<p>Art Direction and Branding</p>

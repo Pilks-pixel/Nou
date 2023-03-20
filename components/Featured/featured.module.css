@@ -13,6 +13,7 @@ Features Layout
 	padding-top: 1em;
 	margin-left: 10px;
 	margin-right: 10px;
+	width: clamp(24vh, 14em, 30vh);
 }
 
 .projectContainer span {
@@ -32,9 +33,9 @@ Features Layout
 .projectImg {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 7.5px;
-	max-width: 500px;
 	width: 100%;
-	height: auto;
+	height: max(12rem, 42vh);
+	object-fit: cover;
 	margin-bottom: 2em;
 	transition: transform 1s ease;
 }

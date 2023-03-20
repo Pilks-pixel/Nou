@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, A11y, Keyboard } from "swiper";
 
 const Featured = () => {
-
 	const [sliderOptions, setSliderOptions] = useState(null);
 
 	useEffect(() => {
@@ -19,7 +18,7 @@ const Featured = () => {
 				spaceBetween: 15,
 			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 30,
 			},
 			1024: {
@@ -57,7 +56,22 @@ const Featured = () => {
 							<Link href='/work'>
 								<Image
 									className={styles.projectImg}
-									src='/fresh_kind.png'
+									src='/fresh/fresh_package.png'
+									height={430}
+									width={270}
+								/>
+							</Link>
+							<span className={styles.projectName}>fresh & Kind</span>
+							<span className={styles.projectType}>logo & packaging</span>
+						</div>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<div className={styles.projectContainer}>
+							<Link href='/work'>
+								<Image
+									className={styles.projectImg}
+									src='/silk_28.png'
 									height={430}
 									width={270}
 								/>
@@ -69,40 +83,31 @@ const Featured = () => {
 
 					<SwiperSlide>
 						<div className={styles.projectContainer}>
-							<Image
-								className={styles.projectImg}
-								src='/silk_28.png'
-								height={430}
-								width={270}
-							/>
-							<span className={styles.projectName}>silk & sense</span>
+							<Link href='/work'>
+								<Image
+									className={styles.projectImg}
+									src='/moane/colours_artboard.png'
+									height={430}
+									width={270}
+								/>
+							</Link>
+							<span className={styles.projectName}>moane</span>
 							<span className={styles.projectType}>logo</span>
 						</div>
 					</SwiperSlide>
 
 					<SwiperSlide>
 						<div className={styles.projectContainer}>
-							<Image
-								className={styles.projectImg}
-								src='/silk_sense_edited.png'
-								height={430}
-								width={270}
-							/>
-							<span className={styles.projectName}>silk & sense</span>
-							<span className={styles.projectType}>logo</span>
-						</div>
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Image
-								className={styles.projectImg}
-								src='/silk_28.png'
-								height={430}
-								width={270}
-							/>
-							<span className={styles.projectName}>silk & sense</span>
-							<span className={styles.projectType}>logo</span>
+							<Link href='/work'>
+								<Image
+									className={styles.projectImg}
+									src='/fresh/fresh_kind.png'
+									height={430}
+									width={270}
+								/>
+							</Link>
+							<span className={styles.projectName}>fresh & kind</span>
+							<span className={styles.projectType}>logo & packaging</span>
 						</div>
 					</SwiperSlide>
 				</Swiper>
