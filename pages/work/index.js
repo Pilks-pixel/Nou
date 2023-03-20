@@ -73,6 +73,7 @@ export default function Work() {
 					></Image>
 
 					<div className={styles.projectDescription}>
+						<h3>Interior Design inspired by nature</h3>
 						<p>
 							Moane is a Interior Design Studio, specialised in comfortable ,
 							stylish interiors that represents the beauty of the island of Bali
@@ -101,36 +102,37 @@ export default function Work() {
 					</div>
 					<Image
 						className={styles.mainProjectImg}
-						src='/fresh/fresh_logo.png'
+						src='/fresh/fresh_kind.png'
 						height={400}
 						width={350}
 						alt='fresh and kind logo'
 					></Image>
 
 					<div className={styles.projectDescription}>
+						<h3>Ethical Hair Care</h3>
 						<p>
-							FRESH + KIND is a haircare brand that has a vision of bringing and
+							FRESH + KIND is a haircare brand that has a vision of bringing an
 							organic, vegan and natural shampoo range to those who care about
 							the planet without compromising on product quality.
 						</p>
 					</div>
 					<Image
 						className={styles.projectImg}
-						src='/fresh/mockup2.jpeg'
+						src='/fresh/fresh_package.png'
 						height={400}
 						width={350}
-						alt='fresh and kind logo on smartphone'
+						alt='fresh and kind logo on packaging'
 					></Image>
 					<Image
 						className={styles.projectImg}
-						src='/fresh/business_card.jpeg'
+						src='/fresh/business_card.png'
 						height={400}
 						width={350}
 						alt='fresh and kind business card'
 					></Image>
 				</section>
 			</main>
-			<footer>
+			<footer className={styles.pageLinks}>
                 <Info />
             </footer>
 		</div>
