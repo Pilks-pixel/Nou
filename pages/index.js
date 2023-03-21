@@ -5,11 +5,11 @@ import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Nav from "../components/Nav/Nav";
 import Service from "../components/Service/Service";
-import Featured from "../components/featured/featured";
+import Featured from "../components/Featured/Featured";
 import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 import { useEffect, useState, useRef} from "react";
-import Favicon from "../components/Favicon/favicon";
+import Favicon from "../components/Favicon/Favicon";
 
 export default function Home() {
 

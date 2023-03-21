@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Featured from "../../components/featured/featured";
 import styles from "../../styles/Work.module.css";
 import utilStyles from "../../styles/utils.module.css";
 import Nav from "../../components/Nav/Nav";
