@@ -72,7 +72,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<section className={styles.hero}>
 					<div className={styles.mainTitle}>
-						<h1>brand & web design studio</h1>
+						<h1>brand &amp; web design studio</h1>
 					</div>
 					<span className={styles.subHeading}>
 						Inspired by Minimalism and fascinated by technology, we craft brands
@@ -127,7 +127,7 @@ export default function Home() {
 						Please allow 2 business days to hear back from us
 					</p>
 					<Link href='/contact' className={utilStyles.pageLink}>
-						Let's Begin
+						Let&#39;s Begin
 					</Link>
 				</div>
 			</section>

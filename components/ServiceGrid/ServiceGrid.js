@@ -31,9 +31,10 @@ const ServiceGrid = () => {
 		threshold: 0.25,
 	};
 
-	let target;
-
+	
 	useEffect(() => {
+		let target;
+		
 		let callback = (entries, observer) => {
 			entries.forEach(entry => {
 				if (!entry.isIntersecting) {

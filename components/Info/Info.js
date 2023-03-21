@@ -24,13 +24,13 @@ const Info = () => {
 
 				<div className={styles.footerLink}>
 					<h5 className={styles.footerLinkTitle}>Connect</h5>
-					<a href='https://www.instagram.com/noudesign.studio/' target='_blank'>
+					<a href='https://www.instagram.com/noudesign.studio/' target='_blank' rel="noreferrer">
 						instagram
 					</a>
-					<a href='https://www.pinterest.co.uk/HortenLlorens/' target='_blank'>
+					<a href='https://www.pinterest.co.uk/HortenLlorens/' target='_blank' rel="noreferrer">
 						pintrest
 					</a>
-					<a href='https://www.behance.net/hortenllorens' target='_blank'>
+					<a href='https://www.behance.net/hortenllorens' target='_blank' rel="noreferrer">
 						behance
 					</a>
 				</div>

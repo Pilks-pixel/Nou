@@ -214,7 +214,7 @@ export default function Contact() {
                   />
 
             </label>
-						<button className={styles.formBtn} type='submit'>Let's Begin</button>
+						<button className={styles.formBtn} type='submit'>Let&#39;s Begin</button>
 					</form>
 
 					<ToastContainer />
