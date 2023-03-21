@@ -1,6 +1,13 @@
 // {
 //   "extends": "next/core-web-vitals"
 // }
+
+// {
+//   "extends": ["next/babel"]
+// }
+
 {
-  "extends": ["next/babel"]
+  "extends": [
+    "next"
+  ]
 }
