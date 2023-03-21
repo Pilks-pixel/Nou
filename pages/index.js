@@ -9,6 +9,7 @@ import Featured from "../components/featured/featured";
 import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 import { useEffect, useState, useRef} from "react";
+import Favicon from "../components/Favicon/favicon";
 
 export default function Home() {
 
@@ -59,12 +60,13 @@ export default function Home() {
 			<Head>
 				<title>Nou Design Studio</title>
 				<meta name='Nou design studio' content='Nou homepage' />
+				<Favicon />
 			</Head>
 
 			<header>
 				<Nav />
 			</header>
-  {/* animation-delay: calc(var(--scroll) * -1s); */}
+  				{/* animation-delay: calc(var(--scroll) * -1s); */}
 				{/* <div className={styles.scrollTracker} ref={ref}></div> */}
 
 			<main className={styles.main}>

@@ -30,7 +30,7 @@ export default function Nav() {
 					aria-expanded={mobileNav}
 					onClick={handleClick}
 				>
-					<span className={styles.srOnly}>Menu</span>
+					<span className={styles.srOnly}></span>
 				</button>
 
 				<ul

@@ -28,7 +28,6 @@ const Featured = () => {
 		};
 
 		setSliderOptions(deviceBreakpoints);
-		console.log({ sliderOptions }, "from use effect");
 	}, []);
 
 	const projectSlider = {
@@ -59,6 +58,7 @@ const Featured = () => {
 									src='/fresh/fresh_package.png'
 									height={430}
 									width={270}
+									alt='fresh & Kind packaging picture'
 								/>
 							</Link>
 							<span className={styles.projectName}>fresh & Kind</span>
@@ -74,6 +74,7 @@ const Featured = () => {
 									src='/silk_28.png'
 									height={430}
 									width={270}
+									alt='silk and sense logo picture'
 								/>
 							</Link>
 							<span className={styles.projectName}>silk & sense</span>
@@ -89,6 +90,7 @@ const Featured = () => {
 									src='/moane/colours_artboard.png'
 									height={430}
 									width={270}
+									alt='Moane logo picture'
 								/>
 							</Link>
 							<span className={styles.projectName}>moane</span>
@@ -104,6 +106,7 @@ const Featured = () => {
 									src='/fresh/fresh_kind.png'
 									height={430}
 									width={270}
+									alt='fresh & Kind logo picture'
 								/>
 							</Link>
 							<span className={styles.projectName}>fresh & kind</span>

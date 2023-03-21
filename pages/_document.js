@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Favicon from "../components/Favicon/favicon";
 
 export default function Document() {
 	return (
@@ -12,6 +13,7 @@ export default function Document() {
 					crossOrigin='anonymous'
 					referrerPolicy='no-referrer'
 				/>
+				<Favicon />
 			</Head>
 			<body>
 				<Main />

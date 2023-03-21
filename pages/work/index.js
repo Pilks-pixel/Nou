@@ -32,6 +32,7 @@ export default function Work() {
 						height={400}
 						width={350}
 						alt='Silk and sense logo'
+                        priority
 					></Image>
 
 					<div className={styles.projectDescription}>

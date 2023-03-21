@@ -7,7 +7,6 @@ import Info from "../../components/Info/Info";
 import styles from "../../styles/About.module.css";
 
 export default function About() {
-
 	return (
 		<div className={utilStyles.container}>
 			<Head>
@@ -28,6 +27,7 @@ export default function About() {
 						height={400}
 						width={350}
 						alt='Picture of Horten, Nou Design Founder'
+						priority
 					></Image>
 
 					<section className={styles.aboutInfo}>
@@ -46,7 +46,7 @@ export default function About() {
 						<Link
 							href='/contact'
 							style={{
-								"text-decoration": "underline",
+								textDecoration: "underline",
 							}}
 						>
 							Say Hello
@@ -54,7 +54,7 @@ export default function About() {
 					</section>
 				</div>
 			</main>
-      
+
 			<footer className={utilStyles.container}>
 				<Info />
 			</footer>
