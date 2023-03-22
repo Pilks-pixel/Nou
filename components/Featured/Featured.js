@@ -42,7 +42,7 @@ const Featured = () => {
 		keyboard: { enabled: true },
 		// pagination:{
 		//   clickable: true,
-		//   dynamicBullets: true
+		//  &amp;dynamicBullets: true
 		// },
 		breakpoints: sliderOptions,
 	};
@@ -58,30 +58,14 @@ const Featured = () => {
 									src='/fresh/fresh_package.png'
 									height={430}
 									width={270}
-									alt='fresh & Kind packaging picture'
+									alt='fresh &amp; Kind packaging picture'
 								/>
 							</Link>
-							<span className={styles.projectName}>fresh & Kind</span>
-							<span className={styles.projectType}>logo & packaging</span>
+							<span className={styles.projectName}>fresh &amp; Kind</span>
+							<span className={styles.projectType}>logo &amp; packaging</span>
 						</div>
 					</SwiperSlide>
-
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Link href='/work'>
-								<Image
-									className={styles.projectImg}
-									src='/silk_28.png'
-									height={430}
-									width={270}
-									alt='silk and sense logo picture'
-								/>
-							</Link>
-							<span className={styles.projectName}>silk & sense</span>
-							<span className={styles.projectType}>logo</span>
-						</div>
-					</SwiperSlide>
-
+					
 					<SwiperSlide>
 						<div className={styles.projectContainer}>
 							<Link href='/work'>
@@ -103,14 +87,31 @@ const Featured = () => {
 							<Link href='/work'>
 								<Image
 									className={styles.projectImg}
+									src='/silk/silk_logo.png'
+									height={430}
+									width={270}
+									alt='silk and sense logo picture'
+								/>
+							</Link>
+							<span className={styles.projectName}>silk &amp; sense</span>
+							<span className={styles.projectType}>logo</span>
+						</div>
+					</SwiperSlide>
+
+
+					<SwiperSlide>
+						<div className={styles.projectContainer}>
+							<Link href='/work'>
+								<Image
+									className={styles.projectImg}
 									src='/fresh/fresh_kind.png'
 									height={430}
 									width={270}
-									alt='fresh & Kind logo picture'
+									alt='fresh &amp; Kind logo picture'
 								/>
 							</Link>
-							<span className={styles.projectName}>fresh & kind</span>
-							<span className={styles.projectType}>logo & packaging</span>
+							<span className={styles.projectName}>fresh &amp; kind</span>
+							<span className={styles.projectType}>logo &amp; packaging</span>
 						</div>
 					</SwiperSlide>
 				</Swiper>
