@@ -1,4 +1,69 @@
-.container {
-    padding: 0 2rem;
-  }
-  
+/* ===============
+Projects Layout
+=============== */
+
+.theme {
+	background-color: var(--primary-background);
+	padding: 1em;
+}
+
+.mainTitle {
+  margin: 1em 0 2em;
+}
+
+.projectContainer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.projectCard {
+  margin: 0 auto;
+  margin-bottom: 3em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 95%;
+}
+
+.projectDescription {
+  max-width: 400px;
+  flex: 1 auto;
+  padding: 1em;
+}
+
+.projectTitle {
+  margin: 0;
+  padding: 0 1em;
+  flex: 1 90%;
+  text-align: center;
+}
+
+.projectImg,
+.mainProjectImg {
+  height: max(10rem, 40vh);
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  flex: 1 auto;
+}
+
+.pageLinks {
+  width: 100%;
+}
+
+.invert {
+  background-color: #bfc1b5;
+}
+/* =============
+Typography
+============= */
+
+.mainTitle {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}

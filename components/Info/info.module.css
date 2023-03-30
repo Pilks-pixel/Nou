@@ -1,0 +1,99 @@
+/* =============
+Info Layout
+============= */
+
+.footer {
+    background: #FFFFFF;
+    padding: 70px 1rem 1rem 1rem;
+  }
+
+.footerLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}  
+
+.footerLink,
+.logoContainer {
+    flex: 1 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2em;
+    gap: 5px;
+}
+
+
+.footerLink span {
+  margin-bottom: 0.5em;
+
+}
+
+.footerLinkTitle {
+  margin: 0 0 .77em 0;
+}
+
+.footerLink a:hover, .footerLink a:focus {
+  opacity: 0.33;
+}
+
+.copyright {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Images */
+
+.logoImg{
+  /* height: 2rem; */
+  width: 2.5rem;
+  padding-top: 4px;
+  margin-bottom: .625rem;
+ }
+
+.logoSubTitle {
+  display: block;
+  font-size: 0.625rem;
+  letter-spacing: 2px;
+}
+
+/* ==============
+Typography
+=============== */
+
+.footerLink a,
+.footerLink span
+.footerLinkTitle,
+.copyright{
+  font-family: neue-haas-unica, sans-serif;
+}
+
+.footerLinkTitle {
+  font-size: .8125rem;
+  letter-spacing: 1.8px;
+}
+
+.footerLink a,
+.footerLink span {
+  font-size: .625rem;
+  font-weight: 100;
+}
+
+.footerLink span {
+  text-transform: uppercase;
+}
+
+.copyright {
+  font-size: .5rem;
+  color: #707070;
+  letter-spacing: 0.75px;
+}
+
+@media (min-width: 435px) {
+  .footerLinksContainer .logoContainer {
+    order: 4;
+    align-self: center;
+  }
+}

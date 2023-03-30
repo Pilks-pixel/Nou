@@ -1,0 +1,41 @@
+/* =========================
+Services Layout / Typography
+=========================== */
+
+.designService {
+	font-size: 1.125rem;
+	font-weight: 300;
+	letter-spacing: 2.8px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+.designService p {
+	font-size: 0.8125rem;
+	letter-spacing: 2px;
+}
+
+.hideServiceContent {
+	display: none;
+}
+
+.showServiceContent {
+	text-transform: capitalize;
+	font-size: 0.75em;
+	width: 90%;
+}
+
+.showServiceContent li {
+	list-style-type: none;
+	margin-bottom: 1em;
+	font-family: neue-haas-unica, sans-serif;
+}
+
+/* Buttons */
+
+.serviceBtn:hover,
+.serviceBtn:focus {
+	cursor: pointer;
+	color: #9f9c93;
+}

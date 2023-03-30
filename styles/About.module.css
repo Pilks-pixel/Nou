@@ -1,0 +1,97 @@
+/* ===========
+Layout
+=========== */
+.theme {
+	background-color: var(--primary-background);
+}
+
+.aboutContainer {
+	width: 90%;
+	margin: 0 auto;
+	padding: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 0.5em;
+}
+
+.aboutImg {
+	height: auto;
+	width: 100%;
+	max-width: 350px;
+	border-radius: 10px;
+	justify-self: center;
+}
+
+.title {
+	text-align: center;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+.aboutInfo {
+	padding-left: 1em;
+	height: max-content;
+	align-self: center;
+}
+
+.aboutInfo p:nth-child(3) {
+	margin-top: 4em;
+	font-size: 0.75em;
+}
+
+.aboutInfo a {
+	margin-top: 1em;
+	padding: 0;
+}
+
+/* ===========
+Typography
+============ */
+
+.aboutInfo p:nth-child(3) {
+	text-transform: capitalize;
+}
+
+.aboutInfo p {
+	color: #707070;
+}
+
+/* =======
+Media
+======== */
+
+@media (min-width: 597px) {
+	.aboutContainer {
+		padding-right: 3em;
+	}
+
+	.title {
+		transform: rotate(-90deg);
+		justify-self: end;
+		align-self: center;
+		width: max-content;
+		font-size: 3rem;
+		padding-top: 1.5em;
+	}
+
+	.aboutInfo {
+		grid-column: 2 / -1;
+		max-width: 500px;
+		justify-self: center;
+	}
+}
+
+@media (min-width: 844px) {
+	.aboutInfo {
+		grid-column: 3 / span 1;
+		max-width: 400px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.aboutInfo {
+		justify-self: start;
+		padding-left: 3.5em;
+	}
+}
