@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
@@ -8,50 +7,31 @@ import Service from "../components/Service/Service";
 import Featured from "../components/Featured/Featured";
 import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState } from "react";
 import Favicon from "../components/Favicon/Favicon";
 
 export default function Home() {
 
-	// const [scrollPosition, setScrollPosition] = useState(0);
-	// const ref = useRef(null);
+	const [scrollPosition, setScrollPosition] = useState(0);
 
 	
+	const handleScroll = () => {
+		const winScrollValue = document.documentElement.scrollTop || document.body.scrollTop;
 
-	// console.log({scrollPosition})
+		const totalScrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-	// const progressKeyFrame = [
-	// 	{width: '0'},
-	// 	{width: `${scrollPosition}`}
-	// ]
+		setScrollPosition((winScrollValue / totalScrollableHeight) * 100)
+	};
 
-	// const progressTiming = {
-	// 	duration: 3000,
-	// 	iterations: 1,
-	// 	fill: 'forwards',
-    // 	easing: 'linear',
-	// 	// delay: scrollPosition * -1000,
+	useEffect(()=> {
 
-	//   }
-
-	// const handleScroll = () => {
-	// 	// const position = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-	// 	const position = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)) * 100
-	// 	setScrollPosition(position);			
-	// };
-
-	// useEffect(()=> {
-
-	// 	ref.current.animate(progressKeyFrame, progressTiming)
-	// 	window.addEventListener('scroll', handleScroll, { passive: true });
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		
-	// 	console.log(ref.current)
+    	return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
 
-    // 	return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    // };
-
-	// },[])
+	},[])
 
 
 	
@@ -65,9 +45,11 @@ export default function Home() {
 
 			<header>
 				<Nav />
+				<div 
+				className={styles.scrollTracker}
+				style={{width:`${scrollPosition}%`}}
+				></div>
 			</header>
-  				{/* animation-delay: calc(var(--scroll) * -1s); */}
-				{/* <div className={styles.scrollTracker} ref={ref}></div> */}
 
 			<main className={styles.main}>
 				<section className={styles.hero}>
