@@ -5,6 +5,10 @@ Layout
 	background-color: var(--primary-background);
 }
 
+.mainContainer {
+	overflow: auto;
+}
+
 .aboutContainer {
 	width: 90%;
 	margin: 0 auto;
