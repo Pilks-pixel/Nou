@@ -91,13 +91,12 @@ export default function Contact() {
 				<title>Contact</title>
 			</Head>
 
-			<div className={utilStyles.contactContainer}>
-			<header>
-				<Nav />
-			</header>
+			<div className={`${utilStyles.container} ${styles.theme}`}>
+				<header>
+					<Nav />
+				</header>
 
-			<main className={`${styles.theme}`}>
-				<div className={styles.contactContainer}>
+				<main className={`${styles.contactContainer}`}>
 					<h2 className={styles.title}>GET IN CONTACT</h2>
 					<section className={styles.formDescription}>
 						<p>
@@ -224,13 +223,12 @@ export default function Contact() {
 					</form>
 
 					<ToastContainer />
-				</div>
-			</main>
-			</div>
 
-			<footer className={utilStyles.container}>
-				<Info />
-			</footer>
+					<footer className={styles.contactFooter}>
+						<Info />
+					</footer>
+				</main>
+			</div>
 		</>
 	);
 }
