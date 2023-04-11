@@ -163,8 +163,7 @@ Animation
   z-index: 2;
   left: 0;
   top: 0;
-  height: 0.5rem;
-  transform-origin: left;
+  height: 6px;
   background: #bfc1b5;
 }
 
