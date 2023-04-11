@@ -44,7 +44,7 @@ export default function Home() {
 			</Head>
 
 			<div>
-				<header>
+				<header className={styles.header}>
 					<Nav />
 					<div 
 					className={styles.scrollTracker}
