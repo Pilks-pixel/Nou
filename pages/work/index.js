@@ -79,7 +79,7 @@ export default function Work() {
 							<h3>Interior Design inspired by nature</h3>
 							<p>
 								Moane, a Bali-based interior design studio. Their philosophy is
-								rooted in the belief that the natural beauty and power of Bali's
+								rooted in the belief that the natural beauty and power of Bali&apos;s
 								volcanic terrain can be translated into elegant and timeless
 								design elements
 							</p>
