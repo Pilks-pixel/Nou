@@ -6,58 +6,61 @@ import Nav from "../../components/Nav/Nav";
 import Info from "../../components/Info/Info";
 import styles from "../../styles/About.module.css";
 
+
 export default function About() {
 	return (
-		<div className={utilStyles.container}>
+		<>
 			<Head>
 				<title>About</title>
 			</Head>
 
-			<header>
-				<Nav />
-			</header>
+			<div className={`${utilStyles.container} ${styles.theme}`}>
+				<header>
+					<Nav />
+				</header>
 
-			<main className={`${utilStyles.container} ${styles.theme}`}>
-				<div className={styles.aboutContainer}>
-					<h2 className={styles.title}>About me</h2>
+				<main className={styles.mainContainer}>
+					<div className={styles.aboutContainer}>
+						<h2 className={styles.title}>About me</h2>
 
-					<Image
-						className={styles.aboutImg}
-						src='/about_me.png'
-						height={400}
-						width={350}
-						alt='Picture of Horten, Nou Design Founder'
-						priority
-					></Image>
+						<Image
+							className={styles.aboutImg}
+							src='/about_me.png'
+							height={400}
+							width={350}
+							alt='Picture of Horten, Nou Design Founder'
+							priority
+						></Image>
 
-					<section className={styles.aboutInfo}>
-						<p>
-							Hey there, I am Horten, a visual designer specialised in
-							minimalism Branding & Web Design
-						</p>
+						<section className={styles.aboutInfo}>
+							<p>
+								Hey there, I am Horten, a visual designer specialised in
+								minimalism Branding & Web Design
+							</p>
 
-						<p>
-							I believe in creating Visual Designs with purpose, that are
-							timeless &
-						</p>
+							<p>
+								I believe in creating Visual Designs with purpose, that are
+								timeless &
+							</p>
 
-						<p>She / Her • proud Spanish / British</p>
+							<p>She / Her • proud Spanish / British</p>
 
-						<Link
-							href='/contact'
-							style={{
-								textDecoration: "underline",
-							}}
-						>
-							Say Hello
-						</Link>
-					</section>
-				</div>
-			</main>
+							<Link
+								href='/contact'
+								style={{
+									textDecoration: "underline",
+								}}
+							>
+								Say Hello
+							</Link>
+						</section>
+					</div>
 
-			<footer className={utilStyles.container}>
-				<Info />
-			</footer>
-		</div>
+					<footer>
+						<Info />
+					</footer>
+				</main>
+			</div>
+		</>
 	);
 }

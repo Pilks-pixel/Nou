@@ -21,7 +21,7 @@ body {
 }
 
 header {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	background: var(--primary-background);
 	padding: 0 min(2em, 4vw);
 }
@@ -68,12 +68,3 @@ Projects Carousel
 		}
 	}
 }
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */

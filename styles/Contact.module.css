@@ -1,6 +1,5 @@
 .theme {
 	background-color: var(--primary-background);
-	padding: 1em;
 }
 
 /* =============
@@ -9,8 +8,10 @@ Contact Layout
 
 .contactContainer {
 	margin: 0 auto;
-	width: 90%;
-	padding: 2rem 0;
+	width: 100%;
+	padding-top: 2em;
+	overflow: auto;
+
 }
 
 .title {
@@ -33,6 +34,7 @@ Contact Layout
 }
 
 .formContainer {
+	margin-bottom: 2rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
@@ -141,6 +143,10 @@ Media
 	.formContainer,
 	.formDescription {
 		grid-column: 2 / -1;
+	}
+
+	.contactFooter {
+		grid-column:  1 / -1;
 	}
 }
 

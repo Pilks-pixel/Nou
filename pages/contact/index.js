@@ -86,20 +86,23 @@ export default function Contact() {
 	};
 
 	return (
-		<div className={utilStyles.container}>
+		<>
 			<Head>
 				<title>Contact</title>
 			</Head>
 
-			<header>
-				<Nav />
-			</header>
+			<div className={`${utilStyles.container} ${styles.theme}`}>
+				<header>
+					<Nav />
+				</header>
 
-			<main className={`${utilStyles.container} ${styles.theme}`}>
-				<div className={styles.contactContainer}>
+				<main className={`${styles.contactContainer}`}>
 					<h2 className={styles.title}>GET IN CONTACT</h2>
 					<section className={styles.formDescription}>
-						<p>Are you ready to take your business to <span>the next level</span>?</p>
+						<p>
+							Are you ready to take your business to <span>the next level</span>
+							?
+						</p>
 						<p>
 							Please fill out the form below so we can get an idea of your
 							project needs.
@@ -109,10 +112,9 @@ export default function Contact() {
 
 					<form onSubmit={handleSubmission} className={styles.formContainer}>
 						<label>
-							Name{" "}
-              <br></br>
+							Name <br></br>
 							<input
-                className={styles.textInput}
+								className={styles.textInput}
 								name='name'
 								onChange={e => {
 									setFormData({ ...formData, customerName: e.target.value });
@@ -121,11 +123,10 @@ export default function Contact() {
 							/>
 						</label>
 
-						<label  >
-							Email{" "}
-              <br></br>
+						<label>
+							Email <br></br>
 							<input
-                className={styles.textInput}
+								className={styles.textInput}
 								name='email'
 								type='email'
 								onChange={e => {
@@ -137,93 +138,97 @@ export default function Contact() {
 
 						<p className={styles.formServicesTitle}>
 							What service(s) are you interested in?
-            </p>
-							<label>
-								<input
-									name='branding'
-									type='checkbox'
-									onChange={e => {
-										setFormData({ ...formData, branding: !formData.branding });
-									}}
-								/>
-								 Branding
-							</label>
-							<label>
-								<input
-									name='webDesign'
-									type='checkbox'
-									onChange={e => {
-										setFormData({
-											...formData,
-											webDesign: !formData.webDesign,
-										});
-									}}
-								/>
-								 Web Design
-							</label>
-							<label>
-								<input
-									name='print'
-									type='checkbox'
-									onChange={e => {
-										setFormData({ ...formData, print: !formData.print });
-									}}
-								/>
-								 Print Design
-							</label>
-							<label>
-								<input
-									className={styles.formCheckOther}
-									name='other'
-									type='checkbox'
-									onChange={e => {
-										setFormData({ ...formData, other: !formData.other });
-									}}
-								/>
-								 Other
-							</label>
+						</p>
+						<label>
+							<input
+								name='branding'
+								type='checkbox'
+								onChange={e => {
+									setFormData({ ...formData, branding: !formData.branding });
+								}}
+							/>
+							Branding
+						</label>
+						<label>
+							<input
+								name='webDesign'
+								type='checkbox'
+								onChange={e => {
+									setFormData({
+										...formData,
+										webDesign: !formData.webDesign,
+									});
+								}}
+							/>
+							Web Design
+						</label>
+						<label>
+							<input
+								name='print'
+								type='checkbox'
+								onChange={e => {
+									setFormData({ ...formData, print: !formData.print });
+								}}
+							/>
+							Print Design
+						</label>
+						<label>
+							<input
+								className={styles.formCheckOther}
+								name='other'
+								type='checkbox'
+								onChange={e => {
+									setFormData({ ...formData, other: !formData.other });
+								}}
+							/>
+							Other
+						</label>
 
-              
-						<label htmlFor="deadlineInputId">
-							Are there any deadlines that we should be aware of?{" "}
-              <br></br>
-              <input
-                className={styles.textInput}
-                name='deadline'
-                id="deadlineInputId"
-                onChange={e => {
-                  setFormData({ ...formData, deadline: e.target.value });
-                }}
-                required
-                />
-            </label>
+						<label htmlFor='deadlineInputId'>
+							Are there any deadlines that we should be aware of? <br></br>
+							<input
+								className={styles.textInput}
+								name='deadline'
+								id='deadlineInputId'
+								onChange={e => {
+									setFormData({ ...formData, deadline: e.target.value });
+								}}
+								required
+							/>
+						</label>
 
-			<label htmlFor="textInputId">
-				Please, describe your project below{" "}
-              <textarea
-                  className={ warningText? `${styles.textInput} ${styles.redCharacters}` : `${styles.textInput}` }
-                  id="textInputId"
-                  name='description'
-                  onChange={e => {
-                    setFormData({ ...formData, description: e.target.value });
-					console.log({warningText} ,e.target.value.length)
-					e.target.value.length > 200? setWarningText(true) 
-						: setWarningText(false)
-                  }}
-                  required
-                  />
-
-            </label>
-						<button className={styles.formBtn} type='submit'>Let&#39;s Begin</button>
+						<label htmlFor='textInputId'>
+							Please, describe your project below{" "}
+							<textarea
+								className={
+									warningText
+										? `${styles.textInput} ${styles.redCharacters}`
+										: `${styles.textInput}`
+								}
+								id='textInputId'
+								name='description'
+								onChange={e => {
+									setFormData({ ...formData, description: e.target.value });
+									console.log({ warningText }, e.target.value.length);
+									e.target.value.length > 200
+										? setWarningText(true)
+										: setWarningText(false);
+								}}
+								required
+							/>
+						</label>
+						<button className={styles.formBtn} type='submit'>
+							Let&#39;s Begin
+						</button>
 					</form>
 
 					<ToastContainer />
-				</div>
-			</main>
 
-			<footer className={utilStyles.container}>
-				<Info />
-			</footer>
-		</div>
+					<footer className={styles.contactFooter}>
+						<Info />
+					</footer>
+				</main>
+			</div>
+		</>
 	);
 }

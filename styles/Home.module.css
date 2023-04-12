@@ -13,7 +13,17 @@ Layout
 	background: #f5f5ef;
 }
 
+.main {
+padding-top: 3rem;
+}
+
 /* Containers */
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
 .hero {
 	background: #f5f5ef;
 	width: 90%;
@@ -157,23 +167,6 @@ Animation
 /* @media (prefers-reduced-motion) {
   
 } */
-/* Scroll Tracker */
-.scrollTracker {
-  position: fixed;
-  z-index: 2;
-  /* inset: 0 0 auto; */
-  left: 0;
-  top: 0;
-  /* width: 100%; */
-  height: 0.5rem;
-  transform-origin: left;
-  background: hotpink;
-  /* animation: progress 1000ms linear;
-  animation-play-state: paused;
-  animation-fill-mode: both;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;  */
-}
 
 /* Banner fade in */
 .banner::before {

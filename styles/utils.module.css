@@ -4,27 +4,16 @@ Util Layout
 .container {
     padding: 0;
     margin: 0;
-    /* outline: 2px solid black; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto, 1fr;
+    height: 100vh;
+
   }  
 
 .sectionTitle {
     margin-bottom: 3.5em;
   }  
-
-  /* buttons  */
-/* .btn {
-    background-color: #E6E6E4;
-    font-family: inherit;
-    padding: .5em 1em;
-    margin-bottom: 1em;
-    border-radius: 5px;
-    box-shadow: .1em .1em .3em;
-  }
-
-.btn:hover {
-    cursor: pointer;
-    opacity: .5;
-} */
 
 
 /* Links */
