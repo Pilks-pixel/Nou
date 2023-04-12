@@ -6,13 +6,19 @@ Projects Layout
 	background-color: var(--primary-background);
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
 .mainTitle {
   margin: 1em 0 2em;
 }
 
 .projectContainer {
   margin: 0 auto;
-  /* width: 90%; */
+  padding-top: 4rem;
   overflow: auto;
 }
 
@@ -23,12 +29,13 @@ Projects Layout
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 1.5em;
   width: 95%;
 }
 
 .projectDescription {
-  max-width: 500px;
+  /* margin: 1em; */
+  max-width: 425px;
   flex: 1 auto;
   padding: 1em;
 }
@@ -50,8 +57,10 @@ Projects Layout
 
 .projectImg,
 .mainProjectImg {
+  /* margin: 0 1em; */
   width: 100%;
-  max-width: 500px;
+  height: auto;
+  max-width: 425px;
   object-fit: cover;
   flex: 1 auto;
 }

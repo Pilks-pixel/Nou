@@ -6,6 +6,7 @@ import Nav from "../../components/Nav/Nav";
 import Info from "../../components/Info/Info";
 import styles from "../../styles/About.module.css";
 
+
 export default function About() {
 	return (
 		<>

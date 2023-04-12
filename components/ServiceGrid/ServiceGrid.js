@@ -3,7 +3,7 @@ import styles from "./serviceGrid.module.css";
 import { useRef, useEffect, useState } from "react";
 
 const ServiceGrid = () => {
-	const itemsRef = useRef(null);
+	const itemsRef = useRef(null);	
 
 	// WAAPI animations
 	const listFadeKeyFrame = [
@@ -54,7 +54,7 @@ const ServiceGrid = () => {
 	}, [itemsRef]);
 
 	return (
-		<div className={utilStyles.container}>
+		<div>
 			<h2 className={utilStyles.sectionTitle}>Services</h2>
 
 			<div className={styles.servicesContainer}>

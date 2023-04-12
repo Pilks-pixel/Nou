@@ -1,0 +1,10 @@
+/* Scroll Tracker */
+.scrollTracker {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: -1;
+    height: 3px;
+    background: #bfc1b5;
+    box-shadow: 0 1px 1px #888888;;
+  }

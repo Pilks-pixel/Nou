@@ -5,6 +5,7 @@ import utilStyles from "../../styles/utils.module.css";
 import Nav from "../../components/Nav/Nav";
 import Image from "next/image";
 import Info from "../../components/Info/Info";
+import ScrollTracker from "../../components/ScrollTracker/ScrollTracker";
 
 export default function Work() {
 	return (
@@ -13,9 +14,10 @@ export default function Work() {
 				<title>Work</title>
 			</Head>
 
-			<div className={`${utilStyles.container} ${styles.theme}`}>
-				<header>
+			<div className={`${styles.theme}`}>
+				<header className={styles.header}>
 					<Nav />
+					<ScrollTracker />
 				</header>
 
 				<main className={`${styles.projectContainer} `}>

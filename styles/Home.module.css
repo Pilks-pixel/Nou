@@ -13,7 +13,17 @@ Layout
 	background: #f5f5ef;
 }
 
+.main {
+padding-top: 3rem;
+}
+
 /* Containers */
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
 .hero {
 	background: #f5f5ef;
 	width: 90%;
@@ -157,15 +167,6 @@ Animation
 /* @media (prefers-reduced-motion) {
   
 } */
-/* Scroll Tracker */
-.scrollTracker {
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  height: 6px;
-  background: #bfc1b5;
-}
 
 /* Banner fade in */
 .banner::before {

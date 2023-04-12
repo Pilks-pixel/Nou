@@ -7,32 +7,11 @@ import Service from "../components/Service/Service";
 import Featured from "../components/Featured/Featured";
 import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
-import { useEffect, useState } from "react";
 import Favicon from "../components/Favicon/Favicon";
+import ScrollTracker from "../components/ScrollTracker/ScrollTracker";
+
 
 export default function Home() {
-
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	
-	const handleScroll = () => {
-		const winScrollValue = document.documentElement.scrollTop || document.body.scrollTop;
-
-		const totalScrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-		setScrollPosition((winScrollValue / totalScrollableHeight) * 100)
-	};
-
-	useEffect(()=> {
-
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		
-    	return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-
-	},[])
-
 
 	
 	return (
@@ -46,10 +25,7 @@ export default function Home() {
 			<div>
 				<header className={styles.header}>
 					<Nav />
-					<div 
-					className={styles.scrollTracker}
-					style={{width:`${scrollPosition}%`}}
-					></div>
+					<ScrollTracker />
 				</header>
 
 				<main className={styles.main}>
@@ -116,7 +92,7 @@ export default function Home() {
 				</section>
 			</div>
 
-			<footer className={utilStyles.container}>
+			<footer>
 				<Info />
 			</footer>
 		</>
