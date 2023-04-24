@@ -6,8 +6,13 @@ import Nav from "../../components/Nav/Nav";
 import Image from "next/image";
 import Info from "../../components/Info/Info";
 import ScrollTracker from "../../components/ScrollTracker/ScrollTracker";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import { useRef} from "react";
+
 
 export default function Work() {
+	const scrollRef = useRef(null);
+
 	return (
 		<>
 			<Head>
@@ -20,7 +25,8 @@ export default function Work() {
 					<ScrollTracker />
 				</header>
 
-				<main className={`${styles.projectContainer} `}>
+				<ScrollToTop pageTop={scrollRef} />
+				<main className={`${styles.projectContainer} `} ref={scrollRef}>
 					<h2 className={styles.mainTitle}>Featured work</h2>
 					<section className={styles.projectCard}>
 						<div className={styles.projectTitle}>

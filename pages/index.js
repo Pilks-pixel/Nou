@@ -9,11 +9,12 @@ import Info from "../components/Info/Info";
 import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
 import Favicon from "../components/Favicon/Favicon";
 import ScrollTracker from "../components/ScrollTracker/ScrollTracker";
-
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import { useRef} from "react";
 
 export default function Home() {
+	const scrollRef = useRef(null);
 
-	
 	return (
 		<>
 			<Head>
@@ -28,14 +29,15 @@ export default function Home() {
 					<ScrollTracker />
 				</header>
 
-				<main className={styles.main}>
+				<ScrollToTop pageTop={scrollRef} />
+				<main className={styles.main} ref={scrollRef}>
 					<section className={styles.hero}>
 						<div className={styles.mainTitle}>
 							<h1>brand &amp; web design studio</h1>
 						</div>
 						<span className={styles.subHeading}>
-							Inspired by Minimalism and fascinated by technology, we craft brands
-							and websites that elevate and up level your business
+							Inspired by Minimalism and fascinated by technology, we craft
+							brands and websites that elevate and up level your business
 						</span>
 						<div className={utilStyles.pageLink}>
 							<Link href={"/contact"} className={styles.contactLink}>
@@ -47,7 +49,9 @@ export default function Home() {
 
 				<section className={styles.projects}>
 					<div className={styles.banner}>
-						<h3 className={styles.bannerText}>your business needs memorable branding</h3>
+						<h3 className={styles.bannerText}>
+							your business needs memorable branding
+						</h3>
 					</div>
 					<h3 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>
 						featured work
