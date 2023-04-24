@@ -16,6 +16,18 @@ Projects Layout
   margin: 1em 0 2em;
 }
 
+.parrallax {
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .projectContainer {
   margin: 0 auto;
   padding-top: 4rem;
