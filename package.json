@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-toastify": "^9.1.1",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "8.25.0",

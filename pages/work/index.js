@@ -9,6 +9,8 @@ import ScrollTracker from "../../components/ScrollTracker/ScrollTracker";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import { useRef, useEffect } from "react";
 import { projectsData } from "../data";
+import { v4 as uuidv4 } from "uuid";
+
 
 export default function Work() {
 	const scrollRef = useRef(null);
@@ -72,8 +74,16 @@ export default function Work() {
 		target.forEach(item => observer.observe(item));
 	}, [itemsRef]);
 
+	// Give each project an ID
+	const projectCardsWithID = projectsData.map(data => {
+		return {
+			...data,
+			id: uuidv4(),
+		}
+	})
+
 	// Display each project from Data
-	const projectCards = projectsData.map(data => {
+	const projectCards = projectCardsWithID.map(data => {
 		const {
 			heading,
 			subHeading,
@@ -82,10 +92,11 @@ export default function Work() {
 			primaryImage,
 			images,
 			parallaxImage,
+			id
 		} = data;
 
 		return (
-			<section className={styles.project}>
+			<section className={styles.project} key={id}>
 				<div
 					className={styles.parallax}
 					style={{ backgroundImage: `url(${parallaxImage})` }}
@@ -121,14 +132,15 @@ export default function Work() {
 					>
 						<h3>{descriptionHeading}</h3>
 						{/* display all paragraphs in discription */}
-						{description.map(paragraph => {
-							return <p>{paragraph}</p>;
+						{description.map((paragraph, index) => {
+							return <p key={index}>{paragraph}</p>;
 						})}
 					</div>
 					{/* display all images */}
-					{images.map(img => {
+					{images.map((img, index) => {
 						return (
 							<Image
+								key={index}
 								className={styles.projectImg}
 								src={img}
 								height={400}
