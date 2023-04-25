@@ -30,6 +30,7 @@ export default function Work() {
 		duration: 1500,
 		iterations: 1,
 		fill: "both",
+		delay: 750
 	};
 
 	// Intersection Observer Appear on Scroll Logic
@@ -53,7 +54,13 @@ export default function Work() {
 					return;
 				}
 
-				entry.target.animate(fadeInKeyFrame, imageTiming);
+				if (entry.target.tagName.toLowerCase() === 'div' ) {
+					entry.target.animate(fadeInKeyFrame, textTiming);
+				} else {
+					entry.target.animate(fadeInKeyFrame, imageTiming);
+
+				}
+
 				observer.unobserve(entry.target);
 			});
 		};
@@ -80,7 +87,7 @@ export default function Work() {
 		return (
 			<section className={styles.project}>
 				<div
-					className={styles.parrallax}
+					className={styles.parallax}
 					style={{ backgroundImage: `url(${parallaxImage})` }}
 				></div>
 				<div className={styles.projectCard}>

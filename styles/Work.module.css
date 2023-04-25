@@ -16,7 +16,7 @@ Projects Layout
   margin: 1em 0 2em;
 }
 
-.parrallax {
+.parallax {
   /* Set a specific height */
   width: 100%;
   min-height: 500px; 
@@ -94,3 +94,15 @@ Typography
   font-weight: 700;
   font-size: clamp(1.25rem, 5vw, 2rem);
 }
+
+/* ======
+Media
+====== */
+
+@media (max-width: 500px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+
