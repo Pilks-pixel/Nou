@@ -11,7 +11,6 @@ export default function Nav() {
 
 	const handleClick = () => {
 		setMobileNav(prevMobile => !prevMobile);
-		console.log({ mobileNav }, router.pathname, "the router path");
 	};
 
 	return (
