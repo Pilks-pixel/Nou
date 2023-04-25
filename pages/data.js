@@ -1,6 +1,6 @@
 const projectsData = [
 	{
-		heading: "Silk &amp; Sense",
+		heading: "Silk & Sense",
 		subHeading: "Art Direction and Branding",
 		descriptionHeading:
 			"Premium Brand Specialised In Artisanal Handmade Scarves",
@@ -12,7 +12,8 @@ const projectsData = [
         light, neutral colours and the typography define the minimal,
         feminine and delicate and delicate personality of each scarf`,
 		],
-		images: ["/silk/silk.png", "/silk/silk_logo.png", "/silk/silk_mockup.png"],
+        primaryImage: "/silk/silk.png",
+		images: ["/silk/silk_logo.png", "/silk/silk_mockup.png"],
 		parallaxImage: "/silk_28.png",
 	},
 	{
@@ -29,15 +30,15 @@ const projectsData = [
         representation of their Bali Inspiration, with elegant lines
         that reflects volcanic landscapes.`,
 		],
+        primaryImage: "/moane/colours_artboard.png",
 		images: [
-			"/moane/colours_artboard.png",
 			"/moane/moane.png",
 			"/moane/mockup.png",
 		],
 		parallaxImage: "/moane/colours_artboard.png",
 	},
 	{
-		heading: "Fresh &amp; Kind",
+		heading: "Fresh & Kind",
 		subHeading: "Art Direction and packaging",
 		descriptionHeading: "Ethical Hair Care",
 		description: [
@@ -51,8 +52,8 @@ const projectsData = [
         the icon with waves simulating the hair we created a modern,
         minimal, clean but relaxed brand.`,
 		],
+        primaryImage: "/fresh/fresh_kind.png",
 		images: [
-			"/fresh/fresh_kind.png",
 			"/fresh/fresh_package.png",
 			"/fresh/business_card.png",
 		],

@@ -13,53 +13,59 @@ import { projectsData } from "../data";
 export default function Work() {
 	const scrollRef = useRef(null);
 
-	// console.log(projectsData.map(p => p.heading))
+	// Display each project from Data
 	const projectCards = projectsData.map(data => {
-		const {heading, subHeading, descriptionHeading, description, images, parallaxImage} = data
+		const {
+			heading,
+			subHeading,
+			descriptionHeading,
+			description,
+			primaryImage,
+			images,
+			parallaxImage,
+		} = data;
 
-		return <section className={styles.project}>
-						<div className={styles.parrallax} style={{ backgroundImage: `url(${parallaxImage})`}}></div>
-						<div className={styles.projectCard}>
-							<div className={styles.projectTitle}>
-								<h2>{heading}</h2>
-								<p>{subHeading}</p>
-							</div>
-							<Image
-								className={styles.mainProjectImg}
-								src={images[0]}
-								height={400}
-								width={350}
-								alt='Silk and sense logo'
-								priority
-							></Image>
+		return (
+			<section className={styles.project}>
+				<div
+					className={styles.parrallax}
+					style={{ backgroundImage: `url(${parallaxImage})` }}
+				></div>
+				<div className={styles.projectCard}>
+					<div className={styles.projectTitle}>
+						<h2>{heading}</h2>
+						<p>{subHeading}</p>
+					</div>
+					<Image
+						className={styles.mainProjectImg}
+						src={primaryImage}
+						height={400}
+						width={350}
+						alt='Silk and sense logo'
+						priority
+					></Image>
 
-							<div className={styles.projectDescription}>
-								<h3>{descriptionHeading}</h3>
-								<p>
-									{description[0]}
-								</p>
-								<p>
-									{description[1]}
-								</p>
-							</div>
-							<Image
-								className={styles.projectImg}
-								src={images[1]}
-								height={400}
-								width={350}
-								alt='Silk and sense submark logo'
+					<div className={styles.projectDescription}>
+						<h3>{descriptionHeading}</h3>
+						{/* display all paragraphs in discription */}
+						{description.map(paragraph => {
+							return <p>{paragraph}</p>;
+						})}
+					</div>
+						{/* display all images */}
+						{images.map(img => {
+							return <Image
+							className={styles.projectImg}
+							src={img}
+							height={400}
+							width={350}
+							alt='Silk and sense submark logo'
 							></Image>
-							<Image
-								className={styles.projectImg}
-								src={images[2]}
-								height={400}
-								width={350}
-								alt='Silk and sense logo on a badge'
-							></Image>
-						</div>
-					</section>
-
-	})
+						})}
+				</div>
+			</section>
+		);
+	});
 
 	return (
 		<>

@@ -17,11 +17,11 @@ Projects Layout
 }
 
 .parrallax {
-
   /* Set a specific height */
+  width: 100%;
   min-height: 500px; 
 
-  /* Create the parallax scrolling effect */
+  /* Parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +69,6 @@ Projects Layout
 
 .projectImg,
 .mainProjectImg {
-  /* margin: 0 1em; */
   width: 100%;
   height: auto;
   max-width: 425px;
@@ -81,9 +80,7 @@ Projects Layout
   width: 100%;
 }
 
-.invert {
-  background-color: #bfc1b5;
-}
+
 /* =============
 Typography
 ============= */
