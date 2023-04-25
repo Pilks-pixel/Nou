@@ -46,10 +46,11 @@ Projects Layout
 }
 
 .projectDescription {
-  /* margin: 1em; */
   max-width: 425px;
   flex: 1 auto;
   padding: 1em;
+  opacity: 0;
+
 }
 
 .projectDescription > * {
@@ -74,6 +75,7 @@ Projects Layout
   max-width: 425px;
   object-fit: cover;
   flex: 1 auto;
+  opacity: 0;
 }
 
 .pageLinks {
