@@ -26,7 +26,7 @@ const Service = () => {
 	};
 
 	return (
-		<div className={utilStyles.container}>
+		<div>
 			<h2 className={utilStyles.sectionTitle}>Services</h2>
 
 			<div className={styles.designService}>
@@ -45,7 +45,7 @@ const Service = () => {
 							<li>Mini Brand Guidelines</li>
 							<li>2 Revisions</li>
 						</ul>
-					</div>
+					</div>	
 				)}
 			</div>
 			<div className={styles.designService}>

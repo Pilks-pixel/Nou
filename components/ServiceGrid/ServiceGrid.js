@@ -25,7 +25,7 @@ const ServiceGrid = () => {
 		return itemsRef.current;
 	}
 
-	let options = {
+	const options = {
 		root: null,
 		rootMargin: "0px",
 		threshold: 0.25,
@@ -35,7 +35,7 @@ const ServiceGrid = () => {
 	useEffect(() => {
 		let target;
 		
-		let callback = (entries, observer) => {
+		const callback = (entries, observer) => {
 			entries.forEach(entry => {
 				if (!entry.isIntersecting) {
 					return;
@@ -46,7 +46,7 @@ const ServiceGrid = () => {
 			});
 		};
 
-		let observer = new IntersectionObserver(callback, options);
+		const observer = new IntersectionObserver(callback, options);
 
 		target = itemsRef.current;
 

@@ -114,6 +114,8 @@ Media
 		position: absolute;
 		top: 1em;
 		right: 1em;
+		background-color: inherit;
+		border: none;
 	}
 
 	/* mobile toggle animation */
