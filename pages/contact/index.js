@@ -103,7 +103,6 @@ export default function Contact() {
 				success: "Message sent 👌",
 				error: "Message rejected 🤯",
 			});
-			console.log(data);
 		}
 	};
 
