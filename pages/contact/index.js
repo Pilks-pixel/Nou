@@ -49,7 +49,29 @@ export default function Contact() {
 		transition: Zoom,
 	};
 
-	// Form handler
+	// Form handlers
+	const handleInput = e => {
+		const {name, value, type} = e.target;
+
+		if (type === 'checkbox') {
+			console.log({formData})
+			setFormData(prevFormData => {
+				return {
+					...prevFormData,
+					[name] : !prevFormData[name]
+				}
+			})
+		} else {
+			setFormData(prevFormData => {
+			   return {
+				   ...prevFormData,
+				   [name] : value
+			   }
+	
+		   })
+		}
+
+	}
 
 	const handleSubmission = async e => {
 		e.preventDefault();
@@ -115,10 +137,8 @@ export default function Contact() {
 							Name <br></br>
 							<input
 								className={styles.textInput}
-								name='name'
-								onChange={e => {
-									setFormData({ ...formData, customerName: e.target.value });
-								}}
+								name='customerName'
+								onChange={handleInput}
 								required
 							/>
 						</label>
@@ -129,9 +149,7 @@ export default function Contact() {
 								className={styles.textInput}
 								name='email'
 								type='email'
-								onChange={e => {
-									setFormData({ ...formData, email: e.target.value });
-								}}
+								onChange={handleInput}
 								required
 							/>
 						</label>
@@ -143,9 +161,7 @@ export default function Contact() {
 							<input
 								name='branding'
 								type='checkbox'
-								onChange={e => {
-									setFormData({ ...formData, branding: !formData.branding });
-								}}
+								onChange={handleInput}
 							/>
 							Branding
 						</label>
@@ -153,12 +169,7 @@ export default function Contact() {
 							<input
 								name='webDesign'
 								type='checkbox'
-								onChange={e => {
-									setFormData({
-										...formData,
-										webDesign: !formData.webDesign,
-									});
-								}}
+								onChange={handleInput}
 							/>
 							Web Design
 						</label>
@@ -166,9 +177,7 @@ export default function Contact() {
 							<input
 								name='print'
 								type='checkbox'
-								onChange={e => {
-									setFormData({ ...formData, print: !formData.print });
-								}}
+								onChange={handleInput}
 							/>
 							Print Design
 						</label>
@@ -177,9 +186,7 @@ export default function Contact() {
 								className={styles.formCheckOther}
 								name='other'
 								type='checkbox'
-								onChange={e => {
-									setFormData({ ...formData, other: !formData.other });
-								}}
+								onChange={handleInput}
 							/>
 							Other
 						</label>
@@ -190,9 +197,7 @@ export default function Contact() {
 								className={styles.textInput}
 								name='deadline'
 								id='deadlineInputId'
-								onChange={e => {
-									setFormData({ ...formData, deadline: e.target.value });
-								}}
+								onChange={handleInput}
 								required
 							/>
 						</label>
@@ -208,11 +213,10 @@ export default function Contact() {
 								id='textInputId'
 								name='description'
 								onChange={e => {
-									setFormData({ ...formData, description: e.target.value });
-									console.log({ warningText }, e.target.value.length);
+									setFormData({ ...formData, description: e.target.value })
 									e.target.value.length > 200
-										? setWarningText(true)
-										: setWarningText(false);
+									? setWarningText(true)
+									: setWarningText(false);
 								}}
 								required
 							/>

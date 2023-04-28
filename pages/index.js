@@ -23,7 +23,7 @@ export default function Home() {
 				<Favicon />
 			</Head>
 
-			<div>
+			<>
 				<header className={styles.header}>
 					<Nav />
 					<ScrollTracker />
@@ -94,7 +94,7 @@ export default function Home() {
 						</Link>
 					</div>
 				</section>
-			</div>
+			</>
 
 			<footer>
 				<Info />

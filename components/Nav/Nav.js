@@ -4,7 +4,6 @@ import styles from "./nav.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-
 export default function Nav() {
 	const [mobileNav, setMobileNav] = useState(false);
 	const router = useRouter();
@@ -35,7 +34,8 @@ export default function Nav() {
 
 				<ul
 					className={
-						mobileNav? styles.navPrimary
+						mobileNav
+							? styles.navPrimary
 							: `${styles.navPrimary} ${styles.navPrimaryHidden}`
 					}
 				>

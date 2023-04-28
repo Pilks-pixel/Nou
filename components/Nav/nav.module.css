@@ -45,6 +45,7 @@
 	display: none;
 }
 
+/* Mobile Nav Toggle button Animation */
 .srOnly {
 	position: relative;
 	display: block;
@@ -61,7 +62,7 @@
 	background-color: black;
 	right: 0;
 	left: 0;
-	transition: all 1000ms ease-out;
+	transition: all 750ms ease-out;
 }
 
 .srOnly::after {

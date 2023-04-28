@@ -11,7 +11,6 @@ import { useRef, useEffect } from "react";
 import { projectsData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
-
 export default function Work() {
 	const scrollRef = useRef(null);
 	const itemsRef = useRef(null);
@@ -32,7 +31,7 @@ export default function Work() {
 		duration: 1500,
 		iterations: 1,
 		fill: "both",
-		delay: 750
+		delay: 750,
 	};
 
 	// Intersection Observer Appear on Scroll Logic
@@ -56,11 +55,10 @@ export default function Work() {
 					return;
 				}
 
-				if (entry.target.tagName.toLowerCase() === 'div' ) {
+				if (entry.target.tagName.toLowerCase() === "div") {
 					entry.target.animate(fadeInKeyFrame, textTiming);
 				} else {
 					entry.target.animate(fadeInKeyFrame, imageTiming);
-
 				}
 
 				observer.unobserve(entry.target);
@@ -79,8 +77,8 @@ export default function Work() {
 		return {
 			...data,
 			id: uuidv4(),
-		}
-	})
+		};
+	});
 
 	// Display each project from Data
 	const projectCards = projectCardsWithID.map(data => {
@@ -92,7 +90,7 @@ export default function Work() {
 			primaryImage,
 			images,
 			parallaxImage,
-			id
+			id,
 		} = data;
 
 		return (

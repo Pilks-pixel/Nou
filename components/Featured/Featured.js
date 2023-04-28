@@ -40,10 +40,9 @@ const Featured = () => {
 		direction: "horizontal",
 		mousewheel: {
 			forceToAxis: true,
-
 		},
 		keyboard: { enabled: true },
-		
+
 		breakpoints: sliderOptions,
 	};
 	return (
@@ -65,7 +64,7 @@ const Featured = () => {
 							<span className={styles.projectType}>logo &amp; packaging</span>
 						</div>
 					</SwiperSlide>
-					
+
 					<SwiperSlide>
 						<div className={styles.projectContainer}>
 							<Link href='/work'>
@@ -97,7 +96,6 @@ const Featured = () => {
 							<span className={styles.projectType}>logo</span>
 						</div>
 					</SwiperSlide>
-
 
 					<SwiperSlide>
 						<div className={styles.projectContainer}>
