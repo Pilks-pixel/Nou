@@ -37,7 +37,7 @@ const Service = () => {
 				{logoServicesToggle && (
 					<div className={styles.showServiceContent}>
 						<ul>
-							<li>Initial Brand call & Branding Questionnaire</li>
+							<li>Initial Brand call &amp; Branding Questionnaire</li>
 							<li>Mood Board Concept</li>
 							<li>Logo Suite : Primary, Secondary Logo and Submark</li>
 							<li>Custom Colour Palette</li>
@@ -45,7 +45,7 @@ const Service = () => {
 							<li>Mini Brand Guidelines</li>
 							<li>2 Revisions</li>
 						</ul>
-					</div>	
+					</div>
 				)}
 			</div>
 			<div className={styles.designService}>
@@ -56,7 +56,7 @@ const Service = () => {
 				{brandServicesToggle && (
 					<div className={styles.showServiceContent}>
 						<ul>
-							<li>Initial Brand call & Branding Questionnaire</li>
+							<li>Initial Brand call &amp; Branding Questionnaire</li>
 							<li>2 Initial Mood Board Concepts</li>
 							<li>Logo Suite : Primary, Secondary Logo and Submark</li>
 							<li>Custom Colour Palette</li>
@@ -78,9 +78,9 @@ const Service = () => {
 					<div className={styles.showServiceContent}>
 						<ul>
 							<li>Custom Website</li>
-							<li>Initial Brand call & Web Content Questionnaire</li>
+							<li>Initial Brand call &amp; Web Content Questionnaire</li>
 							<li>Domaine Transfer / Domaine set up</li>
-							<li>Social Media & Email Marketing Integration</li>
+							<li>Social Media &amp; Email Marketing Integration</li>
 							<li>Responsive Design</li>
 							<li>UX Design</li>
 							<li>Basic SEO</li>
@@ -93,4 +93,4 @@ const Service = () => {
 	);
 };
 
-export default Service;
+export { Service };

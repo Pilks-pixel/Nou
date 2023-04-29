@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import styles from "./scrollTracker.module.css";
 
-function ScrollTracker() {
+const ScrollTracker = () => {
 	const [scrollPosition, setScrollPosition] = useState(0);
 
 	const handleScroll = () => {
@@ -32,6 +32,6 @@ function ScrollTracker() {
 			></div>
 		</>
 	);
-}
+};
 
-export default ScrollTracker;
+export { ScrollTracker };

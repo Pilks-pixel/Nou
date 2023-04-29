@@ -1,12 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
-import styles from "../../styles/Work.module.css";
-import utilStyles from "../../styles/utils.module.css";
-import Nav from "../../components/Nav/Nav";
 import Image from "next/image";
-import Info from "../../components/Info/Info";
-import ScrollTracker from "../../components/ScrollTracker/ScrollTracker";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import styles from "../../styles/Work.module.css";
+import { Nav, Info, ScrollTracker, ScrollToTop } from "../../components";
 import { useRef, useEffect } from "react";
 import { projectsData } from "../data";
 import { v4 as uuidv4 } from "uuid";

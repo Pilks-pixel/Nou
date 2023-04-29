@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import styles from "../../styles/Contact.module.css";
 import utilStyles from "../../styles/utils.module.css";
-import Nav from "../../components/Nav/Nav";
-import Info from "../../components/Info/Info";
+import { Nav, Info } from "../../components/index";
 import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast, Zoom } from "react-toastify";

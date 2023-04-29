@@ -3,7 +3,7 @@ import styles from "./serviceGrid.module.css";
 import { useRef, useEffect, useState } from "react";
 
 const ServiceGrid = () => {
-	const itemsRef = useRef(null);	
+	const itemsRef = useRef(null);
 
 	// WAAPI animations
 	const listFadeKeyFrame = [
@@ -31,10 +31,9 @@ const ServiceGrid = () => {
 		threshold: 0.25,
 	};
 
-	
 	useEffect(() => {
 		let target;
-		
+
 		const callback = (entries, observer) => {
 			entries.forEach(entry => {
 				if (!entry.isIntersecting) {
@@ -140,4 +139,4 @@ const ServiceGrid = () => {
 	);
 };
 
-export default ServiceGrid;
+export { ServiceGrid };

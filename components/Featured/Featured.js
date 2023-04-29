@@ -71,7 +71,6 @@ const Featured = () => {
 	const getSliderCards = () => {
 		const swipers = shuffledArr(projectArr);
 
-
 		return swipers.map(swiper => {
 			let { id, title, type, image } = swiper;
 
@@ -102,4 +101,4 @@ const Featured = () => {
 	);
 };
 
-export default Featured;
+export { Featured };

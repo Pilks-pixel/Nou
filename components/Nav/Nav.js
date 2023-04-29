@@ -4,7 +4,7 @@ import styles from "./nav.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function Nav() {
+const Nav = () => {
 	const [mobileNav, setMobileNav] = useState(false);
 	const router = useRouter();
 
@@ -79,4 +79,6 @@ export default function Nav() {
 			</nav>
 		</>
 	);
-}
+};
+
+export { Nav };

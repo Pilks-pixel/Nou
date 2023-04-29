@@ -2,9 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
-import Nav from "../../components/Nav/Nav";
-import Info from "../../components/Info/Info";
 import styles from "../../styles/About.module.css";
+import { Nav, Info } from "../../components/index";
+
+
 
 export default function About() {
 	return (
