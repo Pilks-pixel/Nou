@@ -1,22 +1,5 @@
 const projectsData = [
 	{
-		heading: "Silk & Sense",
-		subHeading: "Art Direction and Branding",
-		descriptionHeading:
-			"Premium Brand Specialised In Artisanal Handmade Scarves",
-        description: [
-			`
-        The branch on the logo symbolises the family, a mother who
-        started the business (the truck) and the daughter that put
-        that vision into reality (the shoots) The thin lines, the
-        light, neutral colours and the typography define the minimal,
-        feminine and delicate and delicate personality of each scarf`,
-		],
-        primaryImage: "/silk/silk.png",
-		images: ["/silk/silk_logo.png", "/silk/silk_mockup.png"],
-		parallaxImage: "/silk_28.png",
-	},
-	{
 		heading: "Moane",
 		subHeading: "Art Direction and Branding",
 		descriptionHeading: "Interior Design inspired by nature",
@@ -35,7 +18,7 @@ const projectsData = [
 			"/moane/moane.png",
 			"/moane/mockup.png",
 		],
-		parallaxImage: "/moane/colours_artboard.png",
+		parallaxImage: "/moane/moane_para.jpg",
 	},
 	{
 		heading: "Fresh & Kind",
@@ -57,8 +40,25 @@ const projectsData = [
 			"/fresh/fresh_package.png",
 			"/fresh/business_card.png",
 		],
-		parallaxImage: "/fresh/fresh_kind.png",
+		parallaxImage: "/fresh/fresh_para.jpg",
 	},
+    {
+		heading: "Silk & Sense",
+		subHeading: "Art Direction and Branding",
+		descriptionHeading:
+			"Premium Brand Specialised In Artisanal Handmade Scarves",
+        description: [
+			`
+        The branch on the logo symbolises the family, a mother who
+        started the business (the truck) and the daughter that put
+        that vision into reality (the shoots) The thin lines, the
+        light, neutral colours and the typography define the minimal,
+        feminine and delicate and delicate personality of each scarf`,
+		],
+        primaryImage: "/silk/silk.png",
+		images: ["/silk/silk_logo.png", "/silk/silk_mockup.png"],
+		parallaxImage: "/silk/silk_para.jpg",
+	}
 ];
 
 export { projectsData };
