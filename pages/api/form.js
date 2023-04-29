@@ -1,8 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 const nodemailer = require("nodemailer");
 const emailAddress = process.env.EMAIL_ADDRESS;
 const pass = process.env.PASSWORD;
+// create transporter to enable SMTP requests
 let transporter = nodemailer.createTransport({
 	service: "hotmail",
 	auth: {
@@ -13,6 +13,8 @@ let transporter = nodemailer.createTransport({
 
 export default function sendEmail(req, res) {
 	if (req.method === "POST") {
+
+    // Email body & data from form request
 		const {
 			customerName,
 			email,

@@ -35,12 +35,12 @@ export default function About() {
 						<section className={styles.aboutInfo}>
 							<p>
 								Hey there, I am Horten, a visual designer specialised in
-								minimalism Branding & Web Design
+								minimalism Branding &amp; Web Design
 							</p>
 
 							<p>
 								I believe in creating Visual Designs with purpose, that are
-								timeless &
+								timeless &amp; unique
 							</p>
 
 							<p>She / Her • proud Spanish / British</p>
