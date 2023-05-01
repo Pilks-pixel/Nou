@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, A11y, Keyboard } from "swiper";
-import { projectsData } from "../../pages/data";
+import { projectsData } from "../../Data/data";
 import { v4 as uuidv4 } from "uuid";
 
 const Featured = () => {

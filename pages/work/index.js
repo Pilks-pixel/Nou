@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/Work.module.css";
 import { Nav, Info, ScrollTracker, ScrollToTop } from "../../components";
 import { useRef, useEffect } from "react";
-import { projectsData } from "../data";
+import { projectsData } from "../../Data/data";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Work() {
