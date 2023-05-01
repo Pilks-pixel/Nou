@@ -25,12 +25,12 @@ const ScrollTracker = () => {
 	}, []);
 
 	return (
-		<>
+		<div className={styles.scrollTrackerContainer}>
 			<div
 				className={styles.scrollTracker}
 				style={{ width: `${scrollPosition}%` }}
 			></div>
-		</>
+		</div>
 	);
 };
 
