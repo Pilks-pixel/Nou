@@ -1,7 +1,8 @@
 import Head from "next/head"
 import Link from 'next/link'
 import styles from '../../styles/Services.module.css'
-import Nav from "../../components/Nav/Nav";
+
+import { Nav } from "../../components/index";
 
 
 export default function Services() {

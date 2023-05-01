@@ -2,9 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
-import Nav from "../../components/Nav/Nav";
-import Info from "../../components/Info/Info";
 import styles from "../../styles/About.module.css";
+import { Nav, Info } from "../../components/index";
+
 
 
 export default function About() {
@@ -35,12 +35,12 @@ export default function About() {
 						<section className={styles.aboutInfo}>
 							<p>
 								Hey there, I am Horten, a visual designer specialised in
-								minimalism Branding & Web Design
+								minimalism Branding &amp; Web Design
 							</p>
 
 							<p>
 								I believe in creating Visual Designs with purpose, that are
-								timeless &
+								timeless &amp; unique
 							</p>
 
 							<p>She / Her • proud Spanish / British</p>

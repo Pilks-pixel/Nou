@@ -4,14 +4,12 @@ import styles from "./nav.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-
-export default function Nav() {
+const Nav = () => {
 	const [mobileNav, setMobileNav] = useState(false);
 	const router = useRouter();
 
 	const handleClick = () => {
 		setMobileNav(prevMobile => !prevMobile);
-		console.log({ mobileNav }, router.pathname, "the router path");
 	};
 
 	return (
@@ -36,7 +34,8 @@ export default function Nav() {
 
 				<ul
 					className={
-						mobileNav? styles.navPrimary
+						mobileNav
+							? styles.navPrimary
 							: `${styles.navPrimary} ${styles.navPrimaryHidden}`
 					}
 				>
@@ -80,4 +79,6 @@ export default function Nav() {
 			</nav>
 		</>
 	);
-}
+};
+
+export { Nav };

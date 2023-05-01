@@ -4,7 +4,6 @@ import styles from "./info.module.css";
 import Image from "next/legacy/image";
 
 const Info = () => {
-  
 	return (
 		<div className={styles.footer}>
 			<div className={styles.footerLinksContainer}>
@@ -24,13 +23,25 @@ const Info = () => {
 
 				<div className={styles.footerLink}>
 					<h5 className={styles.footerLinkTitle}>Connect</h5>
-					<a href='https://www.instagram.com/noudesign.studio/' target='_blank' rel="noreferrer">
+					<a
+						href='https://www.instagram.com/noudesign.studio/'
+						target='_blank'
+						rel='noreferrer'
+					>
 						instagram
 					</a>
-					<a href='https://www.pinterest.co.uk/HortenLlorens/' target='_blank' rel="noreferrer">
+					<a
+						href='https://www.pinterest.co.uk/HortenLlorens/'
+						target='_blank'
+						rel='noreferrer'
+					>
 						pintrest
 					</a>
-					<a href='https://www.behance.net/hortenllorens' target='_blank' rel="noreferrer">
+					<a
+						href='https://www.behance.net/hortenllorens'
+						target='_blank'
+						rel='noreferrer'
+					>
 						behance
 					</a>
 				</div>
@@ -45,10 +56,10 @@ const Info = () => {
 
 				<div className={styles.footerLink}>
 					<h5 className={styles.footerLinkTitle}>Legal</h5>
-					<span>Q & A</span>
+					<span>Q &amp; A</span>
 					<span>Our Process</span>
 					<span>Policies</span>
-					<span>Terms & Conditions</span>
+					<span>Terms &amp; Conditions</span>
 				</div>
 			</div>
 			<p className={styles.copyright}>
@@ -58,4 +69,4 @@ const Info = () => {
 	);
 };
 
-export default Info;
+export { Info };

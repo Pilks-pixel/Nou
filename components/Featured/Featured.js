@@ -1,12 +1,14 @@
 import styles from "./featured.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, A11y, Keyboard } from "swiper";
+import { projectsData } from "../../Data/data";
+import { v4 as uuidv4 } from "uuid";
 
 const Featured = () => {
 	const [sliderOptions, setSliderOptions] = useState(null);
@@ -38,86 +40,65 @@ const Featured = () => {
 		loop: true,
 		centeredSlides: true,
 		direction: "horizontal",
-		mousewheel: true,
+		mousewheel: {
+			forceToAxis: true,
+		},
 		keyboard: { enabled: true },
-		// pagination:{
-		//   clickable: true,
-		//  &amp;dynamicBullets: true
-		// },
+
 		breakpoints: sliderOptions,
 	};
+
+	// create array of project cards and shuffle
+	const projectArr = [];
+
+	projectsData.map(data => {
+		let { heading, subHeading, primaryImage, images } = data;
+		return projectArr.push(
+			{ title: heading, type: subHeading, image: primaryImage, id: uuidv4() },
+			{ title: heading, type: subHeading, image: images[0], id: uuidv4() }
+		);
+	});
+
+	const shuffledArr = arr => {
+		for (let i = arr.length - 1; i > 0; i--) {
+			let j = Math.floor(Math.random() * i + 1);
+			[arr[i], arr[j]] = [arr[j], arr[i]];
+		}
+		return arr;
+	};
+
+	// Create a swiper for each project
+	const getSliderCards = () => {
+		const swipers = shuffledArr(projectArr);
+
+		return swipers.map(swiper => {
+			let { id, title, type, image } = swiper;
+
+			return (
+				<SwiperSlide key={id}>
+					<div className={styles.projectContainer}>
+						<Link href='/work'>
+							<Image
+								className={styles.projectImg}
+								src={image}
+								height={430}
+								width={270}
+								alt={`Images from ${title}`}
+							/>
+						</Link>
+						<span className={styles.projectName}>{title}</span>
+						<span className={styles.projectType}>{type}</span>
+					</div>
+				</SwiperSlide>
+			);
+		});
+	};
+
 	return (
 		<>
-			{sliderOptions && (
-				<Swiper {...projectSlider}>
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Link href='/work'>
-								<Image
-									className={styles.projectImg}
-									src='/fresh/fresh_package.png'
-									height={430}
-									width={270}
-									alt='fresh &amp; Kind packaging picture'
-								/>
-							</Link>
-							<span className={styles.projectName}>fresh &amp; Kind</span>
-							<span className={styles.projectType}>logo &amp; packaging</span>
-						</div>
-					</SwiperSlide>
-					
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Link href='/work'>
-								<Image
-									className={styles.projectImg}
-									src='/moane/colours_artboard.png'
-									height={430}
-									width={270}
-									alt='Moane logo picture'
-								/>
-							</Link>
-							<span className={styles.projectName}>moane</span>
-							<span className={styles.projectType}>logo</span>
-						</div>
-					</SwiperSlide>
-
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Link href='/work'>
-								<Image
-									className={styles.projectImg}
-									src='/silk/silk_logo.png'
-									height={430}
-									width={270}
-									alt='silk and sense logo picture'
-								/>
-							</Link>
-							<span className={styles.projectName}>silk &amp; sense</span>
-							<span className={styles.projectType}>logo</span>
-						</div>
-					</SwiperSlide>
-
-
-					<SwiperSlide>
-						<div className={styles.projectContainer}>
-							<Link href='/work'>
-								<Image
-									className={styles.projectImg}
-									src='/fresh/fresh_kind.png'
-									height={430}
-									width={270}
-									alt='fresh &amp; Kind logo picture'
-								/>
-							</Link>
-							<span className={styles.projectName}>fresh &amp; kind</span>
-							<span className={styles.projectType}>logo &amp; packaging</span>
-						</div>
-					</SwiperSlide>
-				</Swiper>
-			)}
+			{sliderOptions && <Swiper {...projectSlider}>{getSliderCards()}</Swiper>}
 		</>
 	);
 };
 
-export default Featured;
+export { Featured };

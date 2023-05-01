@@ -3,7 +3,7 @@ import styles from "./serviceGrid.module.css";
 import { useRef, useEffect, useState } from "react";
 
 const ServiceGrid = () => {
-	const itemsRef = useRef(null);	
+	const itemsRef = useRef(null);
 
 	// WAAPI animations
 	const listFadeKeyFrame = [
@@ -25,17 +25,16 @@ const ServiceGrid = () => {
 		return itemsRef.current;
 	}
 
-	let options = {
+	const options = {
 		root: null,
 		rootMargin: "0px",
 		threshold: 0.25,
 	};
 
-	
 	useEffect(() => {
 		let target;
-		
-		let callback = (entries, observer) => {
+
+		const callback = (entries, observer) => {
 			entries.forEach(entry => {
 				if (!entry.isIntersecting) {
 					return;
@@ -46,7 +45,7 @@ const ServiceGrid = () => {
 			});
 		};
 
-		let observer = new IntersectionObserver(callback, options);
+		const observer = new IntersectionObserver(callback, options);
 
 		target = itemsRef.current;
 
@@ -140,4 +139,4 @@ const ServiceGrid = () => {
 	);
 };
 
-export default ServiceGrid;
+export { ServiceGrid };

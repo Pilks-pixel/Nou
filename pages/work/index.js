@@ -1,17 +1,157 @@
 import Head from "next/head";
-import Link from "next/link";
-import styles from "../../styles/Work.module.css";
-import utilStyles from "../../styles/utils.module.css";
-import Nav from "../../components/Nav/Nav";
 import Image from "next/image";
-import Info from "../../components/Info/Info";
-import ScrollTracker from "../../components/ScrollTracker/ScrollTracker";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
-import { useRef} from "react";
-
+import styles from "../../styles/Work.module.css";
+import { Nav, Info, ScrollTracker, ScrollToTop } from "../../components";
+import { useRef, useEffect } from "react";
+import { projectsData } from "../../Data/data";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Work() {
 	const scrollRef = useRef(null);
+	const itemsRef = useRef(null);
+
+	// WAAPI animations
+	const fadeInKeyFrame = [
+		{ opacity: 0, filter: "blur(3px)" },
+		{ opacity: 1, filter: "blur(0)" },
+	];
+
+	const imageTiming = {
+		duration: 1500,
+		iterations: 1,
+		fill: "both",
+	};
+
+	const textTiming = {
+		duration: 1500,
+		iterations: 1,
+		fill: "both",
+		delay: 750,
+	};
+
+	// Intersection Observer Appear on Scroll Logic
+	function getArr() {
+		if (!itemsRef.current) {
+			itemsRef.current = [];
+		}
+		return itemsRef.current;
+	}
+
+	const options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.5,
+	};
+
+	useEffect(() => {
+		const callback = (entries, observer) => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					return;
+				}
+
+				if (entry.target.tagName.toLowerCase() === "div") {
+					entry.target.animate(fadeInKeyFrame, textTiming);
+				} else {
+					entry.target.animate(fadeInKeyFrame, imageTiming);
+				}
+
+				observer.unobserve(entry.target);
+			});
+		};
+
+		const observer = new IntersectionObserver(callback, options);
+
+		let target = itemsRef.current;
+
+		target.forEach(item => observer.observe(item));
+	}, [itemsRef]);
+
+	// Give each project an ID
+	const projectCardsWithID = projectsData.map(data => {
+		return {
+			...data,
+			id: uuidv4(),
+		};
+	});
+
+	// Display each project from Data
+	const projectCards = projectCardsWithID.map(data => {
+		const {
+			heading,
+			subHeading,
+			descriptionHeading,
+			description,
+			primaryImage,
+			images,
+			parallaxImage,
+			id,
+		} = data;
+
+		return (
+			<section className={styles.project} key={id}>
+				<div
+					className={styles.parallax}
+					style={{ backgroundImage: `url(${parallaxImage})` }}
+				></div>
+				<div className={styles.projectCard}>
+					<div className={styles.projectTitle}>
+						<h2>{heading}</h2>
+						<p>{subHeading}</p>
+					</div>
+					<Image
+						className={styles.mainProjectImg}
+						src={primaryImage}
+						height={400}
+						width={350}
+						alt={`${heading} logo`}
+						priority
+						ref={node => {
+							if (node) {
+								const nodeArr = getArr();
+								nodeArr.push(node);
+							}
+						}}
+					></Image>
+
+					<div
+						className={styles.projectDescription}
+						ref={node => {
+							if (node) {
+								const nodeArr = getArr();
+								nodeArr.push(node);
+							}
+						}}
+					>
+						<h3>{descriptionHeading}</h3>
+						{/* display all paragraphs in discription */}
+						{description.map((paragraph, index) => {
+							return <p key={index}>{paragraph}</p>;
+						})}
+					</div>
+					{/* display all images */}
+					{images.map((img, index) => {
+						return (
+							<Image
+								key={index}
+								className={styles.projectImg}
+								src={img}
+								height={400}
+								width={350}
+								alt={`${heading} content images`}
+								ref={node => {
+									if (node) {
+										const nodeArr = getArr();
+										nodeArr.push(node);
+									}
+								}}
+							></Image>
+						);
+					})}
+				</div>
+			</section>
+		);
+	});
 
 	return (
 		<>
@@ -28,133 +168,9 @@ export default function Work() {
 				<ScrollToTop pageTop={scrollRef} />
 				<main className={`${styles.projectContainer} `} ref={scrollRef}>
 					<h2 className={styles.mainTitle}>Featured work</h2>
-					<section className={styles.projectCard}>
-						<div className={styles.projectTitle}>
-							<h2>Silk &amp; Sense</h2>
-							<p>Art Direction and Branding</p>
-						</div>
-						<Image
-							className={styles.mainProjectImg}
-							src='/silk/silk.png'
-							height={400}
-							width={350}
-							alt='Silk and sense logo'
-							priority
-						></Image>
 
-						<div className={styles.projectDescription}>
-							<h3>Premium Brand Specialised In Artisanal Handmade Scarves</h3>
-							<p>
-								The branch on the logo symbolises the family, a mother who
-								started the business (the truck) and the daughter that put that
-								vision into reality (the shoots) The thin lines, the light,
-								neutral colours and the typography define the minimal, feminine
-								and delicate and delicate personality of each scarf
-							</p>
-						</div>
-						<Image
-							className={styles.projectImg}
-							src='/silk/silk_logo.png'
-							height={400}
-							width={350}
-							alt='Silk and sense submark logo'
-						></Image>
-						<Image
-							className={styles.projectImg}
-							src='/silk/silk_mockup.png'
-							height={400}
-							width={350}
-							alt='Silk and sense logo on a badge'
-						></Image>
-					</section>
+					{projectCards}
 
-					<section className={`${styles.projectCard} ${styles.invert}`}>
-						<div className={styles.projectTitle}>
-							<h2>Moane</h2>
-							<p>Art Direction and Branding</p>
-						</div>
-						<Image
-							className={styles.mainProjectImg}
-							src='/moane/colours_artboard.png'
-							height={400}
-							width={350}
-							alt='Moane logo'
-						></Image>
-
-						<div className={styles.projectDescription}>
-							<h3>Interior Design inspired by nature</h3>
-							<p>
-								Moane, a Bali-based interior design studio. Their philosophy is
-								rooted in the belief that the natural beauty and power of Bali&apos;s
-								volcanic terrain can be translated into elegant and timeless
-								design elements
-							</p>
-							<p>
-								For this project we created a typography that is a
-								representation of their Bali Inspiration, with elegant lines
-								that reflects volcanic landscapes.
-							</p>
-						</div>
-						<Image
-							className={styles.projectImg}
-							src='/moane/moane.png'
-							height={400}
-							width={350}
-							alt='Moane business card'
-						></Image>
-						<Image
-							className={styles.projectImg}
-							src='/moane/mockup.png'
-							height={400}
-							width={350}
-							alt='Moane submark logo'
-						></Image>
-					</section>
-
-					<section className={styles.projectCard}>
-						<div className={styles.projectTitle}>
-							<h2 className={styles.projectTitle}>Fresh &amp; Kind</h2>
-							<p>Art Direction and packaging</p>
-						</div>
-						<Image
-							className={styles.mainProjectImg}
-							src='/fresh/fresh_kind.png'
-							height={400}
-							width={350}
-							alt='fresh and kind logo'
-						></Image>
-
-						<div className={styles.projectDescription}>
-							<h3>Ethical Hair Care</h3>
-							<p>
-								Fresh + Kind is a haircare brand that has a vision of bringing
-								and organic, nurturing and unique shampoo range to those who
-								care about the planet without compromising on product quality.
-							</p>
-							<p>
-								The brand was seeking a visual identity system that communicates
-								the nature, the waves, their natural vibe but with a minimalist
-								and modern approach. With lots of negative space, a doble line
-								in the typography reflecting the double purpose of the brand and
-								the icon with waves simulating the hair we created a modern,
-								minimal, clean but relaxed brand.
-							</p>
-						</div>
-						<Image
-							className={styles.projectImg}
-							src='/fresh/fresh_package.png'
-							height={400}
-							width={350}
-							alt='fresh and kind logo on packaging'
-						></Image>
-						<Image
-							className={styles.projectImg}
-							src='/fresh/business_card.png'
-							height={400}
-							width={350}
-							alt='fresh and kind business card'
-						></Image>
-					</section>
 					<footer className={styles.pageLinks}>
 						<Info />
 					</footer>

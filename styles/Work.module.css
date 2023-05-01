@@ -16,6 +16,18 @@ Projects Layout
   margin: 1em 0 2em;
 }
 
+.parallax {
+  /* Set a specific height */
+  width: 100%;
+  min-height: 500px; 
+
+  /* Parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .projectContainer {
   margin: 0 auto;
   padding-top: 4rem;
@@ -34,10 +46,11 @@ Projects Layout
 }
 
 .projectDescription {
-  /* margin: 1em; */
   max-width: 425px;
   flex: 1 auto;
   padding: 1em;
+  opacity: 0;
+
 }
 
 .projectDescription > * {
@@ -57,21 +70,19 @@ Projects Layout
 
 .projectImg,
 .mainProjectImg {
-  /* margin: 0 1em; */
   width: 100%;
   height: auto;
   max-width: 425px;
   object-fit: cover;
   flex: 1 auto;
+  opacity: 0;
 }
 
 .pageLinks {
   width: 100%;
 }
 
-.invert {
-  background-color: #bfc1b5;
-}
+
 /* =============
 Typography
 ============= */
@@ -83,3 +94,19 @@ Typography
   font-weight: 700;
   font-size: clamp(1.25rem, 5vw, 2rem);
 }
+
+.projectDescription {
+  font-family: var(--text-body);
+}
+
+/* ======
+Media
+====== */
+
+@media (max-width: 500px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+

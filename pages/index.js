@@ -2,15 +2,17 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Nav from "../components/Nav/Nav";
-import Service from "../components/Service/Service";
-import Featured from "../components/Featured/Featured";
-import Info from "../components/Info/Info";
-import ServiceGrid from "../components/ServiceGrid/ServiceGrid";
+import {
+	Nav,
+	Service,
+	ServiceGrid,
+	Featured,
+	Info,
+	ScrollTracker,
+	ScrollToTop,
+} from "../components/index";
 import Favicon from "../components/Favicon/Favicon";
-import ScrollTracker from "../components/ScrollTracker/ScrollTracker";
-import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import { useRef} from "react";
+import { useRef } from "react";
 
 export default function Home() {
 	const scrollRef = useRef(null);
@@ -23,7 +25,7 @@ export default function Home() {
 				<Favicon />
 			</Head>
 
-			<div>
+			<>
 				<header className={styles.header}>
 					<Nav />
 					<ScrollTracker />
@@ -94,7 +96,7 @@ export default function Home() {
 						</Link>
 					</div>
 				</section>
-			</div>
+			</>
 
 			<footer>
 				<Info />

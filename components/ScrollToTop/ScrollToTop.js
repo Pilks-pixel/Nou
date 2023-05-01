@@ -3,7 +3,7 @@ import styles from "./scrollToTop.module.css";
 import { FaChevronUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
-function ScrollToTop({ pageTop }) {
+const ScrollToTop = ({ pageTop }) => {
 	const [showScrollBtn, setShowScrollBtn] = useState(false);
 
 	const handleScroll = () => {
@@ -21,12 +21,11 @@ function ScrollToTop({ pageTop }) {
 		};
 	}, []);
 
-
 	const HandleClick = () => {
 		pageTop.current.scrollIntoView({
 			behavior: "smooth",
 		});
-	}
+	};
 
 	return (
 		<>
@@ -38,6 +37,6 @@ function ScrollToTop({ pageTop }) {
 			</button>
 		</>
 	);
-}
+};
 
-export default ScrollToTop;
+export { ScrollToTop };

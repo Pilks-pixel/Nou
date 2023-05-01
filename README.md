@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nou Design Studio
 
-## Getting Started
+![project page screenshot](/screenshot.png)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
+## Deployment 
+
+:rocket: **Deployed** with Vercel at [quiz-night](https://pete-quiz-night.netlify.app)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/afad5a6c-6af2-48a7-be8f-e60a2b06708f/deploy-status)](https://app.netlify.com/sites/pete-quiz-night/deploys)
+
+
+## About
+
+Website of Nou Design Studio, built with Next.js / React. Animation features built with **Web Animation API**, **Intersection Observer**, **Parallax scroll** and **Psuedo Elements** bring the website to life. Helping create a creative UI and intuative UX.
+
+Backend handled by built in Next.js API routing. Which allowed the Contact form to use **Node Mailer** for email collection of user input. 
+
+
+## Instructions
+
+Clone down to local machine, `npm install` and `cd nou-design`
+
+`npm run dev` to run in the development mode.
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+## Wins
+
+-[x] Page scroll tracker and scroll to top features implmented with **useRef**, **useState** and **useEffect** hooks and props for DOM manipulation. 
+
+-[x] Contact form with **validation** and email submission feature created using **Node Mailer**.
+
+-[x] Responsive layouts made using **CSS Grid** & **flexbox**.
+
+-[x] Reusable components made that feature across multiple pages, such as Nav and Scroll tracker.
+
+-[x] Media queries used increased accessability, for instance reducing animation for requested browsers.
+
+## Future features
+
+-[] Import latest social media images with API's.
+
+
+## Significant code
+```javascript
+
+// Array of Refs created & Intersection Observer used to fade in on scroll with timings differing for images and text.
+	function getArr() {
+		if (!itemsRef.current) {
+			itemsRef.current = [];
+		}
+		return itemsRef.current;
+	}
+
+	const options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.5,
+	};
+
+	useEffect(() => {
+		const callback = (entries, observer) => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					return;
+				}
+
+				if (entry.target.tagName.toLowerCase() === "div") {
+					entry.target.animate(fadeInKeyFrame, textTiming);
+				} else {
+					entry.target.animate(fadeInKeyFrame, imageTiming);
+				}
+
+				observer.unobserve(entry.target);
+			});
+		};
+
+		const observer = new IntersectionObserver(callback, options);
+
+		let target = itemsRef.current;
+
+		target.forEach(item => observer.observe(item));
+	}, [itemsRef]);
+
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
