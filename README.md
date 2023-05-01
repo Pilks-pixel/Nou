@@ -1,6 +1,6 @@
 # Nou Design Studio
 
-![project page screenshot](/screenshot.png)
+![project page screenshot](/public/screenshot.png)
 
 ## Deployment
 
