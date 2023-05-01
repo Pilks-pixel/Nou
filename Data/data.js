@@ -2,7 +2,7 @@
 const projectsData = [
 	{
 		heading: "Moane",
-		subHeading: "Art Direction and Branding",
+		subHeading: "Branding",
 		descriptionHeading: "Interior Design inspired by nature",
 		description: [
 			`
@@ -23,7 +23,7 @@ const projectsData = [
 	},
 	{
 		heading: "Fresh & Kind",
-		subHeading: "Art Direction and packaging",
+		subHeading: "Packaging",
 		descriptionHeading: "Ethical Hair Care",
 		description: [
 			`Fresh + Kind is a haircare brand that has a vision of bringing
@@ -45,7 +45,7 @@ const projectsData = [
 	},
     {
 		heading: "Silk & Sense",
-		subHeading: "Art Direction and Branding",
+		subHeading: "Art Direction",
 		descriptionHeading:
 			"Premium Brand Specialised In Artisanal Handmade Scarves",
         description: [

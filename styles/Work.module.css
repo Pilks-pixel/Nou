@@ -99,6 +99,10 @@ Typography
   font-family: var(--text-body);
 }
 
+.projectDescription {
+  font-weight: 300;
+}
+
 /* ======
 Media
 ====== */

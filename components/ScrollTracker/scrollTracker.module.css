@@ -1,10 +1,24 @@
 /* Scroll Tracker */
+.scrollTrackerContainer {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: rgba(191,193,181, 0.5);
+  box-shadow: 0 1px 1px #888888;
+  width: 100%;
+  left: 0;
+  bottom: -1;
+  height: 2px;
+  z-index: 99;
+
+}
+
 .scrollTracker {
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    bottom: -1;
-    height: 3px;
-    background: #bfc1b5;
-    box-shadow: 0 1px 1px #888888;;
+  position: relative;
+  z-index: 999;
+  left: 0;
+  bottom: -1;
+  height: 4px;
+  background-color: rgba(191,193,181, 1);
+  box-shadow: 0 1px 1px #888888;
   }

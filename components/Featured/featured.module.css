@@ -58,13 +58,15 @@ Typography
 }
 
 .projectType {
-	font-size: 1rem;
+	font-size: .75rem;
 	letter-spacing: 6.4px;
 	text-transform: uppercase;
+	font-family: var(--text-body);
+	font-weight: 300;
 }
 
 .projectName {
-	font-size: 0.875;
+	font-size: 0.875rem;
 	font-weight: 200;
 	letter-spacing: 4.2px;
 	text-transform: capitalize;
