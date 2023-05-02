@@ -11,61 +11,51 @@ let transporter = nodemailer.createTransport({
 	},
 });
 
-export default function sendEmail(req, res) {
-	if (req.method === "POST") {
+export default async function sendEmail(req, res) {
+	
+	// Email body & data from form request
+	const {
+		customerName,
+		email,
+		deadline,
+		description,
+		branding,
+		webDesign,
+		print,
+		other,
+	} = req.body.formData;
+	
+	const mailOptions = {
+		from: emailAddress,
+		to: emailAddress,
+		subject: `New message from ${customerName}`,
+		text: description,
+		html: `<div>
+		<h3>You've got a new mail from ${customerName}, their email is: ✉️${email} </h3>
+		<p>Message:</p>
+		<h4>${description}</h4>
+		<br>
+		<h4>Deadline:</h4>
+		<p>${deadline}:</p>
+		<br>
+		<h4>They are interested in</h4>
+		<ul>
+		<li>branding: ${branding}</li>
+		<li>web design: ${webDesign}</li>
+		<li>print: ${print}</li>
+		<li>other: ${other}</li>
+		</ul>
+		</div>`,
+	};
+	
 
-    // Email body & data from form request
-		const {
-			customerName,
-			email,
-			deadline,
-			description,
-			branding,
-			webDesign,
-			print,
-			other,
-		} = req.body.formData;
-
-		const mailOptions = {
-			from: emailAddress,
-			to: emailAddress,
-			subject: `New message from ${customerName}`,
-			text: description,
-			html: `<div>
-                        <h3>You've got a new mail from ${customerName}, their email is: ✉️${email} </h3>
-                        <p>Message:</p>
-                       <h4>${description}</h4>
-                       <br>
-                       <h4>Deadline:</h4>
-                       <p>${deadline}:</p>
-                       <br>
-                       <h4>They are interested in</h4>
-                       <ul>
-                        <li>branding: ${branding}</li>
-                        <li>web design: ${webDesign}</li>
-                        <li>print: ${print}</li>
-                        <li>other: ${other}</li>
-                       </ul>
-                  </div>`,
-		};
-
-		try {
-			 transporter.sendMail(mailOptions, (error, info) => {
-				if (error) {
-					console.error(error);
-					res.status(500).json({ error: "Error sending email" });
-				} else {
-					console.log("Email sent: " + info.response);
-					res.status(250).json({ success: `message delivered to ${info.accepted}` });
-				}
-			});
-
-
-		} catch (error) {
-			res.status(500).json({ error: "Error sending email" });
-		}
-	} else {
-		res.status(405).json({ error: "Method not allowed" });
+	try {
+		await transporter.sendMail(mailOptions)
+		res.status(200).json({sucess: `working`})
+	} catch (error) {
+		res.status(404).json({error: `Connection refused `})
 	}
+
 }
+
 
