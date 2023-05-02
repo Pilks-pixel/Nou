@@ -12,7 +12,8 @@ let transporter = nodemailer.createTransport({
 });
 
 export default async function sendEmail(req, res) {
-	
+	console.log(email, {pass})
+
 	// Email body & data from form request
 	const {
 		customerName,
@@ -50,9 +51,13 @@ export default async function sendEmail(req, res) {
 	
 
 	try {
-		await transporter.sendMail(mailOptions)
-		res.status(200).json({sucess: `message sent`})
+		console.log(email, {pass})
+
+		// await transporter.sendMail(mailOptions)
+		// res.status(200).json({sucess: `message sent`})
+		res.status(200).json({sucess: `${email} ${pass} sent`})
 	} catch (error) {
+		console.log(email, {pass}, 'error')
 		res.status(404).json({error: `Connection refused `})
 	}
 
