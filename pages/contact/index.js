@@ -101,6 +101,8 @@ export default function Contact() {
 				success: "Message sent 👌",
 				error: "Message rejected 🤯",
 			});
+			const response = axios.post(endpoint, { formData }, {timeout: 30000})
+			console.log((await response).data)
 		}
 	};
 

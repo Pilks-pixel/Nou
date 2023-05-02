@@ -12,7 +12,6 @@ let transporter = nodemailer.createTransport({
 });
 
 export default async function sendEmail(req, res) {
-	console.log(email, {pass})
 
 	// Email body & data from form request
 	const {
@@ -51,7 +50,7 @@ export default async function sendEmail(req, res) {
 	
 
 	try {
-		console.log(email, {pass})
+		console.log({email}, {pass})
 
 		// await transporter.sendMail(mailOptions)
 		// res.status(200).json({sucess: `message sent`})
