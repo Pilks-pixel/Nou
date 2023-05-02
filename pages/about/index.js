@@ -40,7 +40,7 @@ export default function About() {
 
 							<p>
 								I believe in creating Visual Designs with purpose, that are
-								timeless &amp; unique
+								timeless &amp; unique.
 							</p>
 
 							<p>She / Her • proud Spanish / British</p>
