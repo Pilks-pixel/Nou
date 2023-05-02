@@ -51,7 +51,7 @@ export default async function sendEmail(req, res) {
 
 	try {
 		await transporter.sendMail(mailOptions)
-		res.status(200).json({sucess: `working`})
+		res.status(200).json({sucess: `message sent`})
 	} catch (error) {
 		res.status(404).json({error: `Connection refused `})
 	}
