@@ -96,7 +96,7 @@ export default function Contact() {
 		}
 
 		if (validateForm()) {
-			 await toast.promise(axios.post(endpoint, { formData }, {timeout: 10000}), {
+			 await toast.promise(axios.post(endpoint, { formData }, {timeout: 30000}), {
 				pending: "Sending..",
 				success: "Message sent 👌",
 				error: "Message rejected 🤯",
