@@ -18,7 +18,7 @@
   z-index: 999;
   left: 0;
   bottom: -1;
-  height: 4px;
-  background-color: rgba(191,193,181, 1);
+  height: 2px;
+  background-color: #252525;
   box-shadow: 0 1px 1px #888888;
   }
