@@ -7,7 +7,7 @@ const ServiceGrid = () => {
 
 	// WAAPI animations
 	const listFadeKeyFrame = [
-		{ opacity: 0, filter: "blur(3px)", clipPath: "inset(45% 0% 45% 0%)" },
+		{ opacity: 0, filter: "blur(3px)", clipPath: "inset(45% 0% 45% 0%)", easing:"ease-in" },
 		{ opacity: 1, filter: "blur(0)", clipPath: "inset(0% 0% 0% 0%)" },
 	];
 

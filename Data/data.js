@@ -8,7 +8,7 @@ const projectsData = [
 			`
         Moane, a Bali-based interior design studio. Their philosophy is
 		rooted in the belief that the natural beauty and power of
-		Bali&apos;s volcanic terrain can be translated into elegant and
+		Bali's volcanic terrain can be translated into elegant and
 		timeless design elements`,
 			`For this project we created a typography that is a
         representation of their Bali Inspiration, with elegant lines
@@ -38,7 +38,7 @@ const projectsData = [
 		],
         primaryImage: "/fresh/fresh_kind.png",
 		images: [
-			"/fresh/fresh_package.png",
+			"/fresh/fresh_pack.png",
 			"/fresh/business_card.png",
 		],
 		parallaxImage: "/fresh/fresh_para.jpg",

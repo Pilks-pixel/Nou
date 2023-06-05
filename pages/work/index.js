@@ -12,7 +12,7 @@ export default function Work() {
 
 	// WAAPI animations
 	const fadeInKeyFrame = [
-		{ opacity: 0, filter: "blur(3px)" },
+		{ opacity: 0, filter: "blur(3px)", easing:"ease-out" },
 		{ opacity: 1, filter: "blur(0)" },
 	];
 
