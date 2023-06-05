@@ -38,7 +38,7 @@ const projectsData = [
 		],
         primaryImage: "/fresh/fresh_kind.png",
 		images: [
-			"/fresh/fresh_package.png",
+			"/fresh/fresh_pack.png",
 			"/fresh/business_card.png",
 		],
 		parallaxImage: "/fresh/fresh_para.jpg",
