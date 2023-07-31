@@ -169,6 +169,7 @@ export default function Work() {
 		<>
 			<Head>
 				<title>Work</title>
+				<meta name='Nou design studio' content='Nou projects page' />
 			</Head>
 
 			<div className={`${styles.theme}`}>
