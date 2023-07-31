@@ -20,12 +20,22 @@ Projects Layout
   /* Set a specific height */
   width: 100%;
   min-height: 500px; 
-
+position: relative;
+clip-path: inset(0 0 0 0);
   /* Parallax scrolling effect */
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.parallaxImgContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; */
 }
 
 .projectContainer {

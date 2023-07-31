@@ -18,6 +18,7 @@ export default function Document() {
 					crossOrigin='anonymous'
 					referrerPolicy='no-referrer'
 				/>
+				<script src="web-animations.min.js"></script>
 				<Favicon />
 			</Head>
 			<body>

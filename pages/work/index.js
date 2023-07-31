@@ -92,8 +92,17 @@ export default function Work() {
 			<section className={styles.project} key={id}>
 				<div
 					className={styles.parallax}
-					style={{ backgroundImage: `url(${parallaxImage})` }}
-				></div>
+				>
+					<div className={styles.parallaxImgContainer}>
+						<Image
+						src={parallaxImage}
+						fill={true}
+						alt={'project background image'}
+						priority={true}
+						style={{objectFit: "cover"}} 
+						/>
+					</div>
+				</div>
 				<div className={styles.projectCard}>
 					<div className={styles.projectTitle}>
 						<h2>{heading}</h2>
@@ -105,7 +114,7 @@ export default function Work() {
 						height={400}
 						width={350}
 						alt={`${heading} logo`}
-						priority
+						priority={true}
 						ref={node => {
 							if (node) {
 								const nodeArr = getArr();

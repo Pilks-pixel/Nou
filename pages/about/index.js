@@ -29,7 +29,7 @@ export default function About() {
 							height={400}
 							width={350}
 							alt='Picture of Horten, Nou Design Founder'
-							priority
+							priority={true}
 						></Image>
 
 						<section className={styles.aboutInfo}>
