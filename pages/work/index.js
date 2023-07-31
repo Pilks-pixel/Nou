@@ -43,6 +43,8 @@ export default function Work() {
 		threshold: 0.5,
 	};
 
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		const callback = (entries, observer) => {
 			entries.forEach(entry => {
@@ -66,6 +68,7 @@ export default function Work() {
 
 		target.forEach(item => observer.observe(item));
 	}, [itemsRef]);
+// eslint-enable react-hooks/exhaustive-deps
 
 	// Give each project an ID
 	const projectCardsWithID = projectsData.map(data => {
@@ -175,15 +178,15 @@ export default function Work() {
 				</header>
 
 				<ScrollToTop pageTop={scrollRef} />
-				<main className={`${styles.projectContainer} `} ref={scrollRef}>
-					<h2 className={styles.mainTitle}>Featured work</h2>
+				<section className={`${styles.projectContainer} `} ref={scrollRef}>
+					<h1 className={styles.mainTitle}>Featured work</h1>
 
 					{projectCards}
 
 					<footer className={styles.pageLinks}>
 						<Info />
 					</footer>
-				</main>
+				</section>
 			</div>
 		</>
 	);

@@ -27,6 +27,7 @@ const Nav = () => {
 					className={styles.mobileNavToggle}
 					aria-controls='navPrimary'
 					aria-expanded={mobileNav}
+					aria-label='nav button mobile'
 					onClick={handleClick}
 				>
 					<span className={styles.srOnly}></span>
