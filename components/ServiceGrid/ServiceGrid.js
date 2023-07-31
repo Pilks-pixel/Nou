@@ -31,6 +31,8 @@ const ServiceGrid = () => {
 		threshold: 0.25,
 	};
 
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		let target;
 
@@ -51,6 +53,8 @@ const ServiceGrid = () => {
 
 		target.forEach(item => observer.observe(item));
 	}, [itemsRef]);
+
+// eslint-enablereact-hooks/exhaustive-deps
 
 	return (
 		<div>

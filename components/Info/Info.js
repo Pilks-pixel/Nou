@@ -22,7 +22,7 @@ const Info = () => {
 				</div>
 
 				<div className={styles.footerLink}>
-					<h5 className={styles.footerLinkTitle}>Connect</h5>
+					<h3 className={styles.footerLinkTitle}>Connect</h3>
 					<a
 						href='https://www.instagram.com/noudesign.studio/'
 						target='_blank'
@@ -47,7 +47,7 @@ const Info = () => {
 				</div>
 
 				<div className={styles.footerLink}>
-					<h5 className={styles.footerLinkTitle}>Quick Links</h5>
+					<h3 className={styles.footerLinkTitle}>Quick Links</h3>
 					<Link href='/'>home</Link>
 					<Link href='/work'>projects</Link>
 					<Link href='/about'>about</Link>
@@ -55,7 +55,7 @@ const Info = () => {
 				</div>
 
 				<div className={styles.footerLink}>
-					<h5 className={styles.footerLinkTitle}>Legal</h5>
+					<h3 className={styles.footerLinkTitle}>Legal</h3>
 					<span>Q &amp; A</span>
 					<span>Our Process</span>
 					<span>Policies</span>

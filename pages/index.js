@@ -32,7 +32,7 @@ export default function Home() {
 				</header>
 
 				<ScrollToTop pageTop={scrollRef} />
-				<main className={styles.main} ref={scrollRef}>
+				<section className={styles.main} ref={scrollRef}>
 					<section className={styles.hero}>
 						<div className={styles.mainTitle}>
 							<h1>brand &amp; web design studio</h1>
@@ -47,17 +47,17 @@ export default function Home() {
 							</Link>
 						</div>
 					</section>
-				</main>
+				</section>
 
 				<section className={styles.projects}>
 					<div className={styles.banner}>
-						<h3 className={styles.bannerText}>
+						<h2 className={styles.bannerText}>
 							your business needs memorable branding
-						</h3>
+						</h2>
 					</div>
-					<h3 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>
+					<h2 className={`${utilStyles.sectionTitle} ${styles.projectsTitle}`}>
 						featured work
-					</h3>
+					</h2>
 					<div className={styles.slider}>
 						<Featured />
 					</div>

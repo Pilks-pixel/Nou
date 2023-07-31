@@ -32,6 +32,7 @@ const ScrollToTop = ({ pageTop }) => {
 			<button
 				className={`${styles.scrollBtn} ${showScrollBtn ? styles.visable : ""}`}
 				onClick={HandleClick}
+				aria-label='go back to top'
 			>
 				<FaChevronUp size={24} />
 			</button>
