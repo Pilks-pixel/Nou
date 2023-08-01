@@ -1,3 +1,6 @@
+import palm from "../public/moane/moane_para.jpg"
+import bubbles from "../public/fresh/fresh_para.jpg"
+import cloth from "../public/silk/silk_para.jpg"
 
 const projectsData = [
 	{
@@ -19,7 +22,7 @@ const projectsData = [
 			"/moane/moane.png",
 			"/moane/mockup.png",
 		],
-		parallaxImage: "/moane/moane_para.jpg",
+		parallaxImage: palm,
 	},
 	{
 		heading: "Fresh & Kind",
@@ -41,7 +44,7 @@ const projectsData = [
 			"/fresh/fresh_pack.png",
 			"/fresh/business_card.png",
 		],
-		parallaxImage: "/fresh/fresh_para.jpg",
+		parallaxImage: bubbles,
 	},
     {
 		heading: "Silk & Sense",
@@ -58,7 +61,7 @@ const projectsData = [
 		],
         primaryImage: "/silk/silk.png",
 		images: ["/silk/silk_logo.png", "/silk/silk_mockup.png"],
-		parallaxImage: "/silk/silk_para.jpg",
+		parallaxImage: cloth,
 	}
 ];
 
