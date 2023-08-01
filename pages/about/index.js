@@ -4,6 +4,7 @@ import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "../../styles/About.module.css";
 import { Nav, Info } from "../../components/index";
+import profilePic from '../../public/about_me.png'
 
 
 
@@ -25,9 +26,8 @@ export default function About() {
 
 						<Image
 							className={styles.aboutImg}
-							src='/about_me.png'
-							height={400}
-							width={350}
+							src={profilePic}
+							placeholder="blur"
 							alt='Picture of Horten, Nou Design Founder'
 							priority={true}
 						></Image>

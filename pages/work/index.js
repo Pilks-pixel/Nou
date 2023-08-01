@@ -4,6 +4,7 @@ import styles from "../../styles/Work.module.css";
 import { Nav, Info, ScrollTracker, ScrollToTop } from "../../components";
 import { useRef, useEffect } from "react";
 import { projectsData } from "../../Data/data";
+
 import { v4 as uuidv4 } from "uuid";
 
 export default function Work() {
@@ -79,7 +80,7 @@ export default function Work() {
 	});
 
 	// Display each project from Data
-	const projectCards = projectCardsWithID.map(data => {
+	const projectCards = projectCardsWithID.map((data, index) => {
 		const {
 			heading,
 			subHeading,
@@ -102,6 +103,7 @@ export default function Work() {
 						fill={true}
 						alt={'project background image'}
 						priority={true}
+						placeholder="blur"
 						style={{objectFit: "cover"}} 
 						/>
 					</div>
